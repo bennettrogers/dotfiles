@@ -15,6 +15,8 @@ colorscheme xoria256
 " switch map leader to ,
 let mapleader = ','
 
+nmap <leader>w :w!<cr>
+
 " relative line numbering when in normal mode
 set rnu
 au InsertEnter * :set nu
@@ -118,6 +120,9 @@ set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 " Make the command-line completion better
 set wildmenu
 
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
 " get rid of the silly characters in window separators
 set fillchars=""
 
@@ -129,6 +134,11 @@ set hlsearch
 
 " Incrementally match the search
 set incsearch
+
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
 " Toggle paste mode
 nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
@@ -142,6 +152,32 @@ nmap <silent> ,ul :t.\|s/./=/g\|set nohls<cr>
 
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+" Remember info about open buffers on close
+set viminfo^=%
 
 "-----------------------------------------------------------------------------
 " MiniBufExplorer Plugin Settings

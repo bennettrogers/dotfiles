@@ -1,0 +1,2 @@
+#make Ctrl+t escape instead of Ctrl+a
+escape ^Tt

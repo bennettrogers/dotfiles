@@ -1,0 +1,3 @@
+#!/bin/bash
+CLUSTER=`sed -n -e 's/^product=//p' /etc/node.facts`
+echo `printf '\005{= bw}%s\005{-}' $CLUSTER`

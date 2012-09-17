@@ -20,4 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-_byobu_sourced=1 . byobu-launch

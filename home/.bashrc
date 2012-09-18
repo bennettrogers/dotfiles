@@ -31,6 +31,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
+    xterm-256color) color_prompt=yes;;
     screen*) color_prompt=yes;;
 esac
 
@@ -56,6 +57,8 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+
+export CLICOLOR=1
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in

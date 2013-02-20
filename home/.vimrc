@@ -12,8 +12,8 @@ set t_Co=256
 colorscheme xoria256
 "endif
 
-" switch map leader to ,
-let mapleader = ','
+" switch map leader to space
+let mapleader=" "
 
 nmap <leader>w :w!<cr>
 
@@ -141,14 +141,14 @@ set showmatch
 set mat=2
 
 " Toggle paste mode
-nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
+nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
 " cd to the directory containing the file in the buffer
-nmap <silent> ,cd :lcd %:h<CR>
-nmap <silent> ,md :!mkdir -p %:p:h<CR>
+nmap <silent> <leader>cd :lcd %:h<CR>
+nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
 " Underline the current line with '='
-nmap <silent> ,ul :t.\|s/./=/g\|set nohls<cr>
+nmap <silent> <leader>ul :t.\|s/./=/g\|set nohls<cr>
 
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
@@ -165,11 +165,24 @@ set wrap "Wrap lines
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" Smart way to move between windows (leader+h/j/k/l to move or create/move in a direction)
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr()) "we havent moved
+    if (match(a:key,'[jk]')) "were we going up/down
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
+
+map <leader>h   :call WinMove('h')<cr>
+map <leader>k   :call WinMove('k')<cr>
+map <leader>l   :call WinMove('l')<cr>
+map <leader>j   :call WinMove('j')<cr>
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -178,6 +191,17 @@ autocmd BufReadPost *
      \ endif
 " Remember info about open buffers on close
 set viminfo^=%
+
+" cycle through all open buffers
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+"
+"-----------------------------------------------------------------------------
+" Syntastic Plugin Settings
+"-----------------------------------------------------------------------------
+let g:syntastic_mode_map = { 'mode': 'active',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': ['html'] }
 
 "-----------------------------------------------------------------------------
 " MiniBufExplorer Plugin Settings

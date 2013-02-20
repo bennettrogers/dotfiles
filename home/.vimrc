@@ -63,7 +63,7 @@ set hidden
 set cpoptions=ces$
 
 " Set the status line the way i like it
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
+" set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
 
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
@@ -165,6 +165,10 @@ set wrap "Wrap lines
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" use enter as write, instead of :w (and punish myself for not learning)
+nmap <CR> :write<CR>
+cabbrev w jackass
+
 " Smart way to move between windows (leader+h/j/k/l to move or create/move in a direction)
 function! WinMove(key)
   let t:curwin = winnr()
@@ -195,7 +199,14 @@ set viminfo^=%
 " cycle through all open buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
-"
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 "-----------------------------------------------------------------------------
 " Syntastic Plugin Settings
 "-----------------------------------------------------------------------------
@@ -221,6 +232,13 @@ map <leader>s :TagbarToggle<CR>
 " Ctrl-P Plugin Settings
 "-----------------------------------------------------------------------------
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"-----------------------------------------------------------------------------
+" EasyMotion Plugin Settings
+"-----------------------------------------------------------------------------
+let g:EasyMotion_leader_key = '<Leader>'
+nmap s <leader>w
+nmap S <leader>b
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size

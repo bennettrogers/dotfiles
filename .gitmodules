@@ -10,3 +10,12 @@
 [submodule "home/.vim/bundle/syntastic"]
 	path = home/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "home/.vim/bundule/powerline"]
+	path = home/.vim/bundule/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "home/.vim/bundle/powerline"]
+	path = home/.vim/bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "home/.vim/bundle/fugitive"]
+	path = home/.vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git

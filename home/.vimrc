@@ -17,6 +17,9 @@ let mapleader=" "
 
 nmap <leader>w :w!<cr>
 
+" try to wean myself off of esc
+:inoremap <esc> <nop>
+
 " relative line numbering when in normal mode
 set rnu
 au InsertEnter * :set nu
@@ -164,10 +167,6 @@ set wrap "Wrap lines
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-
-" use enter as write, instead of :w (and punish myself for not learning)
-nmap <CR> :write<CR>
-cabbrev w jackass
 
 " Smart way to move between windows (leader+h/j/k/l to move or create/move in a direction)
 function! WinMove(key)

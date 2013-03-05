@@ -17,9 +17,6 @@ let mapleader=" "
 
 nmap <leader>w :w!<cr>
 
-" try to wean myself off of esc
-:inoremap <esc> <nop>
-
 " relative line numbering when in normal mode
 set rnu
 au InsertEnter * :set nu

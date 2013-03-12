@@ -203,6 +203,9 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
+" parse json files as javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 "-----------------------------------------------------------------------------
 " Syntastic Plugin Settings
 "-----------------------------------------------------------------------------

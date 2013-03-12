@@ -125,4 +125,3 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #activate virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
-

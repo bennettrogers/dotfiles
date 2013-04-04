@@ -231,6 +231,7 @@ map <leader>s :TagbarToggle<CR>
 " Ctrl-P Plugin Settings
 "-----------------------------------------------------------------------------
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = ''
 
 "-----------------------------------------------------------------------------
 " EasyMotion Plugin Settings

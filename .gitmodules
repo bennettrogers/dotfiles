@@ -25,3 +25,9 @@
 [submodule "home/.vim/bundle/vim-gitgutter"]
     path = home/.vim/bundle/vim-gitgutter
     url = git://github.com/airblade/vim-gitgutter.git
+[submodule "home/.vim/bundle/vim-puppet"]
+	path = home/.vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "home/.vim/bundle/tabular"]
+	path = home/.vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

@@ -27,6 +27,25 @@ if [[ -f ~/.dir_colors && ( -x /usr/local/bin/dircolors || -x /usr/bin/dircolors
     eval `dircolors ~/.dir_colors`
 fi
 
+# Set the custom prompt
+
+# Username@host
+PS1="${bldcyn}\u${txtwht}@${txtgrn}\h${txtwht}:"
+
+# Stopped process count
+PS1=$PS1'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
+
+# Current directory
+PS1=$PS1"${bldblu}\w"
+
+# Current git branch
+if type __git_ps1 >/dev/null 2>&1; then
+    PS1=$PS1'$(__git_ps1 " (%s)")'
+fi
+
+# Finish the prompt
+PS1=$PS1"$txtwht\$ $txtdef"
+
 #autostart tmux
 if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
 then

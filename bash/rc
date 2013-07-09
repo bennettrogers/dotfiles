@@ -15,9 +15,6 @@ fi
 if [ "$system" == 'OSX' ]; then
 	source $rcfiles/bash/rc.osx
 fi
-if [ "$system" == 'MinGW' ]; then
-	source $rcfiles/bash/rc.mingw
-fi
 
 if [ ! -n "$HOSTNAME" ]; then
 	HOSTNAME=`hostname -s`

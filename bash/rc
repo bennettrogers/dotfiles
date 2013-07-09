@@ -1,0 +1,34 @@
+#!/bin/bash
+rcfiles=$HOME/.homesick/repos/rc-files
+
+system=`$rcfiles/system`
+
+if [ -f ~/.localenv ]; then
+	source ~/.localenv
+fi
+
+source $rcfiles/bash/colors
+
+if [ "$system" == 'Linux' ]; then
+	source $rcfiles/bash/rc.linux
+fi
+if [ "$system" == 'OSX' ]; then
+	source $rcfiles/bash/rc.osx
+fi
+if [ "$system" == 'MinGW' ]; then
+	source $rcfiles/bash/rc.mingw
+fi
+
+if [ ! -n "$HOSTNAME" ]; then
+	HOSTNAME=`hostname -s`
+fi
+
+source $rcfiles/aliases
+source $rcfiles/bash/completion
+
+if [[ -f ~/.dir_colors && ( -x /usr/local/bin/dircolors || -x /usr/bin/dircolors ) ]]; then
+    eval `dircolors ~/.dir_colors`
+fi
+
+unset rcfiles
+unset system

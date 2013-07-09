@@ -1,5 +1,5 @@
 #!/bin/bash
-rcfiles=$HOME/.homesick/repos/rc-files
+rcfiles=$HOME/.homesick/repos/dotfiles
 
 system=`$rcfiles/system`
 

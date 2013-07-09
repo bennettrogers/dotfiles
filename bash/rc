@@ -35,8 +35,5 @@ then
     echo "tmux failed to start"
 fi
 
-#activate virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
 unset rcfiles
 unset system

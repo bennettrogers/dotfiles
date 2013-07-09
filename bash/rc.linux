@@ -21,11 +21,3 @@ fi
 alias grep='grep -Hn --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-#autostart tmux
-if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
-then
-    STARTED_TMUX=1; export STARTED_TMUX
-    ~/.local/bin/tmux-shared remote && exit 0
-    echo "tmux failed to start"
-fi

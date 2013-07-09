@@ -3,26 +3,6 @@ export HISTCONTROL=ignoreboth
 shopt -s histappend
 shopt -s checkwinsize
 
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # Username@host
-    PS1="${bldcyn}\u${txtwht}@${txtgrn}\h${txtwht}:"
-
-    # Stopped process count
-    PS1=$PS1'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
-
-    # Current directory
-    PS1=$PS1"${bldblu}\w"
-
-    # Current git branch
-	if type __git_ps1 >/dev/null 2>&1; then
-		PS1=$PS1'$(__git_ps1 " (%s)")'
-	fi
-
-	PS1=$PS1"$txtwht\$ $txtdef"
-else
-	PS1="\u@$HOSTNAME:\w\$ "
-fi
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
 	eval "`dircolors -b`"

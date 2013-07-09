@@ -1,0 +1,14 @@
+#!/bin/bash
+export CLICOLOR=1
+export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+if [ -x /usr/local/bin/ls ]; then
+    alias ls='/usr/local/bin/ls -h --color=auto'
+else
+    alias ls='ls -hG'
+fi
+PS1="$bldcyn\u$txtwht@$txtgrn$HOSTNAME$txtwht:$txtblu\w$txtwht\$ $txtdef"
+# PS1="\u@$HOSTNAME:\w\$ "
+if type __git_ps1 >/dev/null 2>&1; then
+	PS1="$bldcyn\u$txtwht@$txtgrn$HOSTNAME$txtwht:$txtblu\w"'$(__git_ps1 " (%s)")'"$txtwht\$ $txtdef"
+fi

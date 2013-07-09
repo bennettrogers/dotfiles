@@ -1,0 +1,6 @@
+alias grep='grep -Hn'
+alias l='ls -CF'
+alias ll='ls -al'
+alias la='ls -A'
+
+alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"

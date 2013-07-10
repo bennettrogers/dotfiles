@@ -30,17 +30,17 @@ source $rcfiles/bash/completion
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # Username@host
-PS1="${bldcyn}\u${txtwht}@${txtgrn}\h${txtwht}:"
+PS1="${txtcyn}\u${txtblu}@${bldpur}\h${txtwht}:"
 
 # Stopped process count
-PS1=$PS1'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
+PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
 
 # Current directory
 PS1=$PS1"${bldblu}\w"
 
 # Current git branch
 if type __git_ps1 >/dev/null 2>&1; then
-    PS1=$PS1'$(__git_ps1 " (%s)")'
+    PS1=$PS1"${txtylw}$(__git_ps1 ' (%s)')"
 fi
 
 # Finish the prompt

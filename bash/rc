@@ -20,6 +20,9 @@ if [ ! -n "$HOSTNAME" ]; then
 	HOSTNAME=`hostname -s`
 fi
 
+# Fix sorting of ls (dotfiles first!)
+export LC_ALL="C"
+
 source $rcfiles/aliases
 source $rcfiles/bash/completion
 

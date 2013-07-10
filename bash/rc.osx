@@ -1,9 +1,15 @@
 #!/bin/bash
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-if [ -x /usr/local/bin/ls ]; then
-    alias ls='/usr/local/bin/ls -h --color=auto'
+if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
+    if [ -f ~/.dir_colors ]; then
+        eval `dircolors ~/.dir_colors`
+    else
+        eval `dircolors -b`
+    fi
+	alias ls='/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto'
 else
     alias ls='ls -hG'
 fi

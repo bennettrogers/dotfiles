@@ -40,7 +40,7 @@ PS1=$PS1"${bldblu}\w"
 
 # Current git branch
 if type __git_ps1 >/dev/null 2>&1; then
-    PS1=$PS1"${txtylw}$(__git_ps1 ' (%s)')"
+    PS1=$PS1${txtylw}'$(__git_ps1 " (%s)")'
 fi
 
 # Finish the prompt

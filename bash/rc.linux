@@ -16,6 +16,3 @@ fi
 alias grep='grep -Hn --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-#activate virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh

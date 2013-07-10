@@ -13,3 +13,6 @@ if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
 else
     alias ls='ls -hG'
 fi
+
+# Add git abilities to prompt
+source /usr/local/git/contrib/completion/git-completion.bash

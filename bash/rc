@@ -27,6 +27,7 @@ source $rcfiles/aliases
 source $rcfiles/bash/completion
 
 # Set the custom prompt
+GIT_PS1_SHOWDIRTYSTATE=true
 
 # Username@host
 PS1="${bldcyn}\u${txtwht}@${txtgrn}\h${txtwht}:"
@@ -52,6 +53,9 @@ then
     ~/.local/bin/tmux-shared remote && exit 0
     echo "tmux failed to start"
 fi
+
+#activate virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
 unset rcfiles
 unset system

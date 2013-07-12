@@ -17,5 +17,6 @@ fi
 # Add git abilities to prompt
 source /usr/local/git/contrib/completion/git-completion.bash
 
-# Assuming rbenv exists, add it to the path
+# Assuming rbenv exists, add it to the path and initialize it
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

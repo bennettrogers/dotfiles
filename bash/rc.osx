@@ -18,5 +18,5 @@ fi
 source /usr/local/git/contrib/completion/git-completion.bash
 
 # Assuming rbenv exists, add it to the path and initialize it
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

@@ -1,7 +1,12 @@
 #!/bin/bash
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+# Use gnu utils instead of system defaults
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+# Brew packages need to be in path before system packages
+export PATH="/usr/local/bin:$PATH"
 
 if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
     if [ -f ~/.dir_colors ]; then

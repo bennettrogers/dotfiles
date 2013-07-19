@@ -82,6 +82,11 @@ bind pad9:ctrl;cmd  ${topRight}
 bind pad1:ctrl;cmd  ${bottomLeft}
 bind pad3:ctrl;cmd  ${bottomRight}
 
+bind u:ctrl;cmd  ${topLeft}
+bind i:ctrl;cmd  ${topRight}
+bind o:ctrl;cmd  ${bottomLeft}
+bind p:ctrl;cmd  ${bottomRight}
+
 # Throw
 bind 1:ctrl;alt         throw 0 resize
 bind 2:ctrl;alt         throw 1 resize
@@ -100,7 +105,7 @@ bind up:shift;ctrl;alt;cmd      resize +0   +10% bottom-left
 bind down:shift;ctrl;alt;cmd    resize +0   -10% bottom-right
 
 # Focus (Apps)
-bind i:ctrl;alt focus   'iTerm'
+bind t:ctrl;alt focus   'iTerm'
 bind a:ctrl;alt focus   'Adium'
 bind c:ctrl;alt focus   'Google Chrome'
 bind f:ctrl;alt focus   'Firefox'

@@ -18,11 +18,13 @@ let mapleader=" "
 nmap <leader>w :w!<cr>
 
 " relative line numbering when in normal mode
-set rnu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
+if version >= 703
+    set rnu
+    au InsertEnter * :set nu
+    au InsertLeave * :set rnu
+    au FocusLost * :set nu
+    au FocusGained * :set rnu
+endif
 
 " Set filetype stuff to on
 filetype plugin indent on

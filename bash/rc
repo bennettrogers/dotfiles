@@ -9,12 +9,23 @@ fi
 
 source $rcfiles/bash/colors
 
-if [ "$system" == 'Linux' ]; then
-	source $rcfiles/bash/rc.linux
+export HISTCONTROL=ignoreboth
+shopt -s histappend
+shopt -s checkwinsize
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    if [ -f ~/.dir_colors ]; then
+        eval `dircolors ~/.dir_colors`
+    else
+        eval `dircolors -b`
+    fi
+	alias ls='/bin/ls --color=auto'
 fi
-if [ "$system" == 'OSX' ]; then
-	source $rcfiles/bash/rc.osx
-fi
+
+alias grep='grep -Hn --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 if [ ! -n "$HOSTNAME" ]; then
 	HOSTNAME=`hostname -s`

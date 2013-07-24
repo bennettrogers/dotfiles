@@ -50,22 +50,12 @@ set shellslash
 " Make command line two lines high
 set ch=1
 
-" set visual bell -- i hate that damned beeping
-" set vb
-
 " Allow backspacing over indent, eol, and the start of an insert
 set backspace=2
 
 " Make sure that unsaved buffers that are to be put in the background are
 " allowed to go in there (ie. the "must save first" error doesn't come up)
 set hidden
-
-" Make the 'cw' and like commands put a $ at the end instead of just deleting
-" the text and replacing it
-set cpoptions=ces$
-
-" Set the status line the way i like it
-" set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
 
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
@@ -78,9 +68,6 @@ set showcmd
 
 " Show the current mode
 set showmode
-
-" Hide the mouse pointer while typing
-set mousehide
 
 " Set up the gui cursor to look nice
 set guicursor=n-v-c:block-Cursor-blinkon0
@@ -109,7 +96,7 @@ set history=100
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
-" When the page starts to scroll, keep the cursor 8 lines from the top and 8
+" When the page starts to scroll, keep the cursor 6 lines from the top and 6
 " lines from the bottom
 set scrolloff=6
 
@@ -155,7 +142,7 @@ nmap <silent> <leader>ul :t.\|s/./=/g\|set nohls<cr>
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowb
 set noswapfile
@@ -166,25 +153,6 @@ set wrap "Wrap lines
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows (leader+h/j/k/l to move or create/move in a direction)
-function! WinMove(key)
-  let t:curwin = winnr()
-  exec "wincmd ".a:key
-  if (t:curwin == winnr()) "we havent moved
-    if (match(a:key,'[jk]')) "were we going up/down
-      wincmd v
-    else
-      wincmd s
-    endif
-    exec "wincmd ".a:key
-  endif
-endfunction
-
-map <leader>h   :call WinMove('h')<cr>
-map <leader>k   :call WinMove('k')<cr>
-map <leader>l   :call WinMove('l')<cr>
-map <leader>j   :call WinMove('j')<cr>
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -215,10 +183,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
     \ 'passive_filetypes': ['html'] }
 
-"-----------------------------------------------------------------------------
-" MiniBufExplorer Plugin Settings
-"-----------------------------------------------------------------------------
-"
 "-----------------------------------------------------------------------------
 " Powerline Plugin Settings
 "-----------------------------------------------------------------------------

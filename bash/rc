@@ -46,6 +46,10 @@ fi
 # Finish the prompt
 PS1=$PS1"$txtwht\$ $txtdef"
 
+# Assuming rbenv exists, add it to the path and initialize it
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 #autostart tmux
 if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
 then

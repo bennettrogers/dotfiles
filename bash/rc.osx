@@ -24,7 +24,3 @@ source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 
 # Add git completion
 source $(brew --prefix)/etc/bash_completion
-
-# Assuming rbenv exists, add it to the path and initialize it
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"

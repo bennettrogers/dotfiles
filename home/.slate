@@ -67,10 +67,10 @@ bind right:ctrl;cmd ${rightCommand}
 bind up:ctrl;cmd    ${topCommand}
 bind down:ctrl;cmd  ${bottomCommand}
 
-bind h:ctrl;cmd     ${leftCommand}
-bind l:ctrl;cmd     ${rightCommand}
-bind k:ctrl;cmd     ${topCommand}
-bind j:ctrl;cmd     ${bottomCommand}
+#bind h:ctrl;cmd     ${leftCommand}
+#bind l:ctrl;cmd     ${rightCommand}
+#bind k:ctrl;cmd     ${topCommand}
+#bind j:ctrl;cmd     ${bottomCommand}
 
 bind pad5:ctrl;cmd  ${full}
 bind pad4:ctrl;cmd  ${leftCommand}

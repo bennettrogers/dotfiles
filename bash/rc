@@ -7,6 +7,9 @@ if [ -f ~/.localenv ]; then
 	source ~/.localenv
 fi
 
+# Setup homeshick
+source $HOME/.homesick/repos/homeshick/homeshick.sh
+
 source $rcfiles/bash/colors
 
 if [ "$system" == 'Linux' ]; then

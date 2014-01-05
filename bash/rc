@@ -3,15 +3,24 @@ rcfiles=$HOME/.homesick/repos/dotfiles
 
 system=`$rcfiles/system`
 
+# Set up homeshick
+source $HOME/.homesick/repos/homeshick/homeshick.sh
+
+# Source local environment settings
 if [ -f ~/.localenv ]; then
 	source ~/.localenv
 fi
 
-# Setup homeshick
-source $HOME/.homesick/repos/homeshick/homeshick.sh
-
+# Source color aliases
 source $rcfiles/bash/colors
 
+# Source aliases settings
+source $rcfiles/aliases
+
+# Source bash completion settings
+source $rcfiles/bash/completion
+
+# Source platform-specific bashrc files
 if [ "$system" == 'Linux' ]; then
 	source $rcfiles/bash/rc.linux
 fi
@@ -19,6 +28,7 @@ if [ "$system" == 'OSX' ]; then
 	source $rcfiles/bash/rc.osx
 fi
 
+# Set hostname var if it doesn't exist
 if [ ! -n "$HOSTNAME" ]; then
 	HOSTNAME=`hostname -s`
 fi
@@ -26,8 +36,27 @@ fi
 # Fix sorting of ls (dotfiles first!)
 export LC_ALL="C"
 
-source $rcfiles/aliases
-source $rcfiles/bash/completion
+# Assuming rbenv exists, add it to the path and initialize it
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+#autostart tmux
+if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
+then
+    STARTED_TMUX=1; export STARTED_TMUX
+    ~/.local/bin/tmux-shared remote && exit 0
+    echo "tmux failed to start"
+fi
+
+#activate virtualenvwrapper
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+elif [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
+##############################################################################
+# PROMPT
 
 # Set the custom prompt
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -49,24 +78,8 @@ fi
 # Finish the prompt
 PS1=$PS1"$txtwht\$ $txtdef"
 
-# Assuming rbenv exists, add it to the path and initialize it
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+##############################################################################
 
-#autostart tmux
-if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
-then
-    STARTED_TMUX=1; export STARTED_TMUX
-    ~/.local/bin/tmux-shared remote && exit 0
-    echo "tmux failed to start"
-fi
-
-#activate virtualenvwrapper
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-elif [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
-    source /usr/bin/virtualenvwrapper.sh
-fi
-
+# Clean up
 unset rcfiles
 unset system

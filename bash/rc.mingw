@@ -1,7 +1,4 @@
 #!/bin/bash
-export HISTCONTROL=ignoreboth
-shopt -s histappend
-shopt -s checkwinsize
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -20,7 +17,3 @@ if [ -x /usr/bin/dircolors ]; then
 	eval "`dircolors -b`"
 	alias ls='/bin/ls --color=auto'
 fi
-
-alias grep='grep -Hn'
-alias egrep='egrep'
-alias fgrep='fgrep'

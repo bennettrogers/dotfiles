@@ -3,12 +3,17 @@ rcfiles=$HOME/.homesick/repos/dotfiles
 
 system=`$rcfiles/system`
 
+# Set flag if this session is interactive
+if [ -n "$PS1" ]; then
+    INTERACTIVE_SESSION=true
+fi
+
 # Set up homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 # Source local environment settings
 if [ -f ~/.localenv ]; then
-	source ~/.localenv
+    source ~/.localenv
 fi
 
 # Source color aliases
@@ -22,61 +27,89 @@ source $rcfiles/bash/completion
 
 # Source platform-specific bashrc files
 if [ "$system" == 'Linux' ]; then
-	source $rcfiles/bash/rc.linux
+    source $rcfiles/bash/rc.linux
 fi
 if [ "$system" == 'OSX' ]; then
-	source $rcfiles/bash/rc.osx
+    source $rcfiles/bash/rc.osx
 fi
 
 # Set hostname var if it doesn't exist
 if [ ! -n "$HOSTNAME" ]; then
-	HOSTNAME=`hostname -s`
+    HOSTNAME=`hostname -s`
 fi
 
 # Fix sorting of ls (dotfiles first!)
 export LC_ALL="C"
 
+# Set Bash to vi mode
+# set -o vi
+
+# Set default editor to Vim
+export EDITOR=vim
+
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The '&' is a special pattern which suppresses duplicate entries.
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+
+# Don't put duplicate lines or lines starting with a space in the history.
+export HISTCONTROL=ignoreboth
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Check the window size after each command and, if necessary,
+# Update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # Assuming rbenv exists, add it to the path and initialize it
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-#autostart tmux
-if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
-then
-    STARTED_TMUX=1; export STARTED_TMUX
-    ~/.local/bin/tmux-shared remote && exit 0
-    echo "tmux failed to start"
-fi
-
-#activate virtualenvwrapper
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-elif [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
-    source /usr/bin/virtualenvwrapper.sh
-fi
-
 ##############################################################################
-# PROMPT
+# INTERACTIVE SESSION ONLY
 
-# Set the custom prompt
-GIT_PS1_SHOWDIRTYSTATE=true
+if $INTERACTIVE_SESSION; then
 
-# Username@host
-PS1="${txtcyn}\u${txtblu}@${bldpur}\h${txtwht}:"
+    #autostart tmux
+    if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
+    then
+        STARTED_TMUX=1; export STARTED_TMUX
+        ~/.local/bin/tmux-shared remote && exit 0
+        echo "tmux failed to start"
+    fi
 
-# Stopped process count
-PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
+    #activate virtualenvwrapper
+    if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+        source /usr/local/bin/virtualenvwrapper.sh
+    elif [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
+        source /usr/bin/virtualenvwrapper.sh
+    fi
 
-# Current directory
-PS1=$PS1"${bldblu}\w"
+    ##########################################################################
+    # PROMPT
+    GIT_PS1_SHOWDIRTYSTATE=true
 
-# Current git branch
-if type __git_ps1 >/dev/null 2>&1; then
-    PS1=$PS1${txtylw}'$(__git_ps1 " (%s)")'
+    # Username@host
+    PS1="${txtcyn}\u${txtblu}@${bldpur}\h${txtwht}:"
+
+    # Stopped process count
+    PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
+
+    # Current directory
+    PS1=$PS1"${bldblu}\w"
+
+    # Current git branch
+    if type __git_ps1 >/dev/null 2>&1; then
+        PS1=$PS1${txtylw}'$(__git_ps1 " (%s)")'
+    fi
+
+    # Finish the prompt
+    PS1=$PS1"$txtwht\$ $txtdef"
+
+    ##########################################################################
+
 fi
-
-# Finish the prompt
-PS1=$PS1"$txtwht\$ $txtdef"
 
 ##############################################################################
 

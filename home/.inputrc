@@ -1,0 +1,8 @@
+# This file sets all readline applications to use vi keybindings
+
+set editing-mode vi
+
+$if mode=vi
+    # Insert Mode
+    set keymap vi-insert
+$endif

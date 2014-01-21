@@ -109,12 +109,12 @@ set history=100
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
-" When the page starts to scroll, keep the cursor 8 lines from the top and 8
+" When the page starts to scroll, keep the cursor 6 lines from the top and 6
 " lines from the bottom
 set scrolloff=6
 
 " Allow the cursor to go in to "invalid" places
-set virtualedit=all
+" set virtualedit=all
 
 " These things start comment lines
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-

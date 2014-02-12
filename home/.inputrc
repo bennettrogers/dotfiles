@@ -3,6 +3,16 @@
 set editing-mode vi
 
 $if mode=vi
+
+    # Command Mode
+    set keymap vi-command
+    "\e[A": history-search-backward            # arrow up
+    "\e[B": history-search-forward             # arrow down
+    Control-l: clear-screen
+
     # Insert Mode
     set keymap vi-insert
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+    Control-l: clear-screen
 $endif

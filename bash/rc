@@ -62,10 +62,6 @@ shopt -s histappend
 # Update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Assuming rbenv exists, add it to the path and initialize it
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 ##############################################################################
 # INTERACTIVE SESSION ONLY
 

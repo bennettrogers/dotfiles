@@ -7,11 +7,6 @@ alias ll='ls -al'
 alias la='ls -A'
 alias lt='ls -lt'
 
-VLESS=$(find /usr/share/vim -name 'less.sh')
-if [ ! -z $VLESS ]; then
-    alias less=$VLESS
-fi
-
 # Unicode gpg
 alias gpg='gpg2 --display-charset utf-8'
 

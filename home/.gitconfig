@@ -9,3 +9,5 @@
     autosetuprebase = always
 [credential]
 	helper = cache --timeout=86400
+[alias]
+    ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

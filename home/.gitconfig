@@ -1,6 +1,68 @@
 [user]
     name = Bennett Rogers
-    email = bennett@crocodoc.com
+    email = bennettrogers@gmail.com
+[alias]
+    # View the SHA, description, and history graph of the latest 20 commits
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 20
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # View the current working tree status
+    st = status
+    # View the current working tree status using the short format
+    s = status -s
+
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
+    # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+    # diff color words
+    dcw = diff --color-words
+    # Show diff with staged changes
+    dc = diff --cached
+
+    # Switch to a branch, creating it if necessary
+    go = checkout -B
+
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+
+    # Credit an author on the latest commit
+    credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Undo a `git push`
+    undopush = push -f origin HEAD^:master
+
+    # Show unpushed branches/tags
+    unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+
+    # shortcut for branch
+    b = branch
+
+    # shortcut for git add .
+    a = add .
+
+    # shortcut for git add -A
+    aa = add -A
+
+    # for git completion
+    co = checkout
+    ci = commit
+    rb = rebase
+
+    rbc = rebase --continue
+    rba = rebase --abort
+    rbs = rebase --skip
+
+    pr = pull --rebase
+
+    # save shortcut to ammend commit
+    save = commit -a --amend --no-edit
+
 [color]
     ui = true
 [core]
@@ -9,5 +71,17 @@
     autosetuprebase = always
 [credential]
 	helper = cache --timeout=86400
-[alias]
-    ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+# URL shorthands (e.g., git clone gh:crocodoc/dotfiles)
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+    insteadOf = "github:"
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"

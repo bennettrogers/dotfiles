@@ -7,6 +7,17 @@ alias ll='ls -al'
 alias la='ls -A'
 alias lt='ls -lt'
 
+# git typos
+alias gti='git'
+alias got='git'
+
+# Easier navigation: .., ..., ...., ....., and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
 # Unicode gpg
 alias gpg='gpg2 --display-charset utf-8'
 

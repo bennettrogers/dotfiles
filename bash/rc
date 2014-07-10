@@ -55,12 +55,28 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 # Don't put duplicate lines or lines starting with a space in the history.
 export HISTCONTROL=ignoreboth
 
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
 # Check the window size after each command and, if necessary,
 # Update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+    shopt -s "$option" 2> /dev/null
+done
 
 ##############################################################################
 # INTERACTIVE SESSION ONLY

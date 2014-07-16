@@ -1,0 +1,18 @@
+The subtree strategy we're using takes the place of git-submodules and is described here:
+http://git-scm.com/book/ch6-7.html
+
+In short, to add a new subtree:
+git remote add <remote_name> <git_url>
+git fetch <remote_name>
+git checkout -b <remote_branch> <remote_name>/master
+git checkout master
+git read-tree --prefix=<target_dir> -u <remote_branch>
+git commit -m '[subtree] adding <subtree_name>'
+
+To merge changes from remote:
+git checkout <remote_branch>
+git pull
+git checkout master
+git merge --squash -s subtree --no-commit <remote_branch>
+
+There are a few scripts in this directory to help with this process, but they're VERY rough.

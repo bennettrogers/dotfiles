@@ -12,8 +12,8 @@ fi
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 # Source local environment settings
-if [ -f ~/.localenv ]; then
-    source ~/.localenv
+if [ -f ~/.bash_local ]; then
+    source ~/.bash_local
 fi
 
 # Source color aliases

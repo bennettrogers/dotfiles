@@ -50,9 +50,6 @@ set shellslash
 " Make command line two lines high
 set ch=1
 
-" set visual bell -- i hate that damned beeping
-" set vb
-
 " Allow backspacing over indent, eol, and the start of an insert
 set backspace=2
 
@@ -63,9 +60,6 @@ set hidden
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
 set cpoptions=ces$
-
-" Set the status line the way i like it
-" set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
 
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
@@ -112,9 +106,6 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 " When the page starts to scroll, keep the cursor 6 lines from the top and 6
 " lines from the bottom
 set scrolloff=6
-
-" Allow the cursor to go in to "invalid" places
-" set virtualedit=all
 
 " These things start comment lines
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
@@ -167,25 +158,6 @@ set wrap "Wrap lines
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows (leader+h/j/k/l to move or create/move in a direction)
-function! WinMove(key)
-  let t:curwin = winnr()
-  exec "wincmd ".a:key
-  if (t:curwin == winnr()) "we havent moved
-    if (match(a:key,'[jk]')) "were we going up/down
-      wincmd v
-    else
-      wincmd s
-    endif
-    exec "wincmd ".a:key
-  endif
-endfunction
-
-map <leader>h   :call WinMove('h')<cr>
-map <leader>k   :call WinMove('k')<cr>
-map <leader>l   :call WinMove('l')<cr>
-map <leader>j   :call WinMove('j')<cr>
-
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -214,15 +186,6 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
     \ 'passive_filetypes': ['html'] }
-
-"-----------------------------------------------------------------------------
-" MiniBufExplorer Plugin Settings
-"-----------------------------------------------------------------------------
-"
-"-----------------------------------------------------------------------------
-" Powerline Plugin Settings
-"-----------------------------------------------------------------------------
-let g:Powerline_symbols = 'compatible'
 
 "-----------------------------------------------------------------------------
 " Tagbar Plugin Settings

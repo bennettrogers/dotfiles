@@ -1,4 +1,4 @@
 #!/bin/bash
 ENVIRONMENT=$(facter environment)
-ROLE=$(facter node_role)
+ROLE=$(facter role)
 echo $ENVIRONMENT $ROLE

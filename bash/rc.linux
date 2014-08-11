@@ -9,3 +9,7 @@ if [ -x /usr/bin/dircolors ]; then
     fi
     alias ls='/bin/ls --color=auto'
 fi
+
+# Source git completion settings
+source $HOME/.local/bin/git-prompt.sh
+source $HOME/.local/bin/git-completion.bash

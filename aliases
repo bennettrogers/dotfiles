@@ -1,7 +1,7 @@
 # Color grep output
-alias grep='grep -Hnri --color=auto'
-alias fgrep='fgrep -Hnri --color=auto'
-alias egrep='egrep -Hnri --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias l='ls -CF'
 alias ll='ls -al'
 alias la='ls -A'

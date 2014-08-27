@@ -42,7 +42,7 @@ fi
 export LC_ALL="C"
 
 # Set Bash to vi mode
-# set -o vi
+set -o vi
 
 # Set default editor to Vim
 export EDITOR=vim

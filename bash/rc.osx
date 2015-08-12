@@ -28,3 +28,6 @@ source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 
 # Add bash completion
 source $(brew --prefix)/etc/bash_completion
+
+# Use brew ruby
+export PATH=$(brew --prefix ruby)/bin:$PATH

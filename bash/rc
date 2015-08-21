@@ -39,7 +39,14 @@ if [ ! -n "$HOSTNAME" ]; then
 fi
 
 # Fix sorting of ls (dotfiles first!)
-export LC_ALL="C"
+# C.UTF-8 is preferred (like C, but with utf8 support)
+if locale -a | grep -qF 'C.UTF-8'; then
+    loc="C.UTF-8"
+else
+    loc="en_US.UTF-8"
+fi
+export LANG=$loc
+export LC_ALL=$loc
 
 # Set Bash to vi mode
 set -o vi

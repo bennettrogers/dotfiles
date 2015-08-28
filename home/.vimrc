@@ -137,6 +137,9 @@ set mat=2
 " Toggle paste mode
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
+" Toggle spellcheck
+nmap <silent> <leader>l :set invspell spelllang=en_us<CR>:set spell?<CR>
+
 " cd to the directory containing the file in the buffer
 nmap <silent> <leader>cd :lcd %:h<CR>
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>

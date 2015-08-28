@@ -1,4 +1,4 @@
-*~
-*.swp
-tags
-.DS_Store
+doc/tags
+tmp*
+*.lock
+.vim-flavor

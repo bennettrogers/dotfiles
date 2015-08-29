@@ -60,7 +60,7 @@ set hidden
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
-set cpoptions=ces$
+" set cpoptions=ces$
 
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2

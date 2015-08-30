@@ -232,6 +232,8 @@ endfunction
 
 autocmd User GoyoEnter call <SID>goyo_enter()
 autocmd User GoyoLeave call <SID>goyo_leave()
+" Toggle Goyo
+nmap <silent> <leader>g :Goyo<CR>
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size

@@ -226,3 +226,8 @@ if has("gui_running")
     endif
 endif
 :nohls
+
+"-----------------------------------------------------------------------------
+" Detect markdown files
+"-----------------------------------------------------------------------------
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown

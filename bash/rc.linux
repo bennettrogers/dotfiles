@@ -18,3 +18,9 @@ source $HOME/.local/bin/git-completion.bash
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+if $INTERACTIVE_SESSION; then
+    # Reconnect to an existing ssh agent
+    # (https://github.com/scharan/Goodies/blob/master/ssh-agent-restore)
+    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.\* -uid $(id -u) | head -n 1)
+fi

@@ -9,4 +9,4 @@ call lightline#init()
 Goyo
 
 " Initialize vim-pencil
-call pencil#init()
+call pencil#init({'wrap': 'soft'})

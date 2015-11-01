@@ -23,9 +23,18 @@ nmap <leader>w :w!<cr>
 "     au FocusGained * :set rnu
 " endif
 
-" Tabstops are 4 spaces
+" Set a default indent, but vim-sleuth should adjust it.
 set tabstop=4
 set shiftwidth=4
+set expandtab
+
+" More natural splitting.
+set splitbelow
+set splitright
+
+" Backspace is managed by vim-sensible, but I need it here too because some
+" plugins depend on it during start up.
+set backspace=indent,eol,start
 
 " set the search scan to wrap lines
 set wrapscan
@@ -44,6 +53,16 @@ set ch=1
 " Make sure that unsaved buffers that are to be put in the background are
 " allowed to go in there (ie. the "must save first" error doesn't come up)
 set hidden
+"
+" Send more characters to the terminal at once.
+" Makes things smoother, will probably be enabled by my terminal anyway.
+set ttyfast
+"
+" Enable persistent undo.
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 " Don't update the display while executing macros
 set lazyredraw
@@ -74,9 +93,6 @@ set wildignore=*.o,*~,*.pyc
 " get rid of the silly characters in window separators
 set fillchars=""
 
-" Enable search highlighting
-set hlsearch
-
 " Toggle paste mode
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
@@ -95,8 +111,8 @@ set nobackup
 set nowb
 set noswapfile
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" Write files as they are, don't mess with line endings etc.
+set binary
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -107,12 +123,6 @@ autocmd BufReadPost *
 " cycle through all open buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size

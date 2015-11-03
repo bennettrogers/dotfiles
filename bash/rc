@@ -90,7 +90,7 @@ done
 
 if $INTERACTIVE_SESSION; then
 
-    #autostart tmux
+    # autostart tmux
     if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
     then
         STARTED_TMUX=1; export STARTED_TMUX
@@ -98,11 +98,11 @@ if $INTERACTIVE_SESSION; then
         echo "tmux failed to start"
     fi
 
-    #activate virtualenvwrapper
-    if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-        source /usr/local/bin/virtualenvwrapper.sh
-    elif [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
-        source /usr/bin/virtualenvwrapper.sh
+    # activate virtualenvwrapper (lazy means it won't be sourced until needed)
+    if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
+        source /usr/local/bin/virtualenvwrapper_lazy.sh
+    elif [[ -f /usr/bin/virtualenvwrapper_lazy.sh ]]; then
+        source /usr/bin/virtualenvwrapper_lazy.sh
     fi
 
     ##########################################################################

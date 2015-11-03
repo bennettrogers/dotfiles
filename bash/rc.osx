@@ -1,10 +1,14 @@
 #!/bin/bash
-    # Set the custom prompt
+
+# Set the brew prefix for use in other commands, since it's slow to eval
+BREW_PREFIX='/usr/local'
+
+# Set the custom prompt
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # Use GNU coreutils instead of system defaults
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Add GNU coreutils to default man path
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
@@ -24,10 +28,7 @@ else
 fi
 
 # Add git abilities to prompt
-source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+source $BREW_PREFIX/etc/bash_completion.d/git-prompt.sh
 
 # Add bash completion
-source $(brew --prefix)/etc/bash_completion
-
-# Use brew ruby
-export PATH=$(brew --prefix ruby)/bin:$PATH
+source $BREW_PREFIX/etc/bash_completion

@@ -11,8 +11,6 @@ colorscheme xoria256
 " switch map leader to space
 let mapleader=" "
 
-nmap <leader>w :w!<cr>
-
 " relative line numbering when in normal mode
 " TODO: commenting this out for now, since I rarely use it
 " if version >= 703
@@ -97,7 +95,7 @@ set fillchars=""
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
 " Toggle spellcheck
-nmap <silent> <leader>l :set invspell spelllang=en_us<CR>:set spell?<CR>
+nmap <silent> <leader>sp :set invspell spelllang=en_us<CR>:set spell?<CR>
 
 " cd to the directory containing the file in the buffer
 nmap <silent> <leader>cd :lcd %:h<CR>

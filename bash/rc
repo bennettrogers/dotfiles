@@ -85,6 +85,10 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null
 done
 
+# Prevent Ctrl-s and Ctrl-q from sending XOFF and XON signals
+# Allows them to be used elsewhere
+stty -ixon
+
 ##############################################################################
 # INTERACTIVE SESSION ONLY
 

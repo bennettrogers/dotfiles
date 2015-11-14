@@ -1,0 +1,13 @@
+{ 
+	"html": {
+		"filters": "html",
+		"profile": "html",
+		"snippets": { 
+			"polymer:element": "!!!+html>head>link:import[href=\"../bower_components/polymer/polymer.html\"]^dom-module>style+template^script:inline"
+		},
+		"default_attributes": {
+			"dom-module": [{"id": ""}],
+            "script:inline": []
+		}
+	}
+}

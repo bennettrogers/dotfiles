@@ -21,7 +21,11 @@ let mapleader=" "
 "     au FocusGained * :set rnu
 " endif
 
-" Set a default indent, but vim-sleuth should adjust it.
+" Write files as they are, don't mess with line endings etc.
+" NOTE: this has to come before set expandtab or it will disable it
+set binary
+
+" Indentation and tab handling
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -108,9 +112,6 @@ nmap <silent> <leader>ul :t.\|s/./=/g\|set nohls<cr>
 set nobackup
 set nowb
 set noswapfile
-
-" Write files as they are, don't mess with line endings etc.
-set binary
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *

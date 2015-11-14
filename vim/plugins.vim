@@ -12,9 +12,9 @@ Plug 'ctrlpvim/ctrlp.vim'                               " fuzzy file search and 
 Plug 'FelikZ/ctrlp-py-matcher'                          " faster ctrlp matching using python
 Plug 'Lokaltog/vim-easymotion'                          " easy moving within a file
 Plug 'Keithbsmiley/tmux.vim'                            " tmux conf syntax highlighting
-Plug 'jiangmiao/auto-pairs'                             " automatically handle bracket pairs
+Plug 'Raimondi/delimitMate'                             " Auto-closing parens and quotes
 Plug 'Valloric/YouCompleteMe'                           " autocompletion
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }	" javascript completion
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }   " javascript completion
 Plug 'haya14busa/incsearch.vim'                         " highlight all incremental search matches
 Plug 'haya14busa/vim-asterisk'                          " better * operation handling
 Plug 'pangloss/vim-javascript'                          " javascript friendliness
@@ -33,3 +33,5 @@ Plug 'majutsushi/tagbar'                                " shows the current symb
 Plug 'itchyny/lightline.vim'                            " lightweight statusline
 Plug 'rodjek/vim-puppet'                                " makes vim puppet-friendly
 Plug 'junegunn/vim-easy-align'                          " align text
+Plug 'mattn/emmet-vim'                                  " web development multitool
+Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets

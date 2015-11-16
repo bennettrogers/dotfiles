@@ -8,6 +8,7 @@ Plug 'tpope/vim-eunuch'                                 " syntactic sugar for so
 Plug 'tpope/vim-fugitive'                               " git helpers
 Plug 'tpope/vim-surround'                               " smart surrounding (parens, quotes, etc)
 Plug 'tpope/vim-vinegar'                                " project browser in split window
+Plug 'tpope/vim-sleuth'                                 " tries to match indent settings with what already exists in file
 Plug 'ctrlpvim/ctrlp.vim'                               " fuzzy file search and open
 Plug 'FelikZ/ctrlp-py-matcher'                          " faster ctrlp matching using python
 Plug 'Lokaltog/vim-easymotion'                          " easy moving within a file
@@ -35,3 +36,4 @@ Plug 'rodjek/vim-puppet'                                " makes vim puppet-frien
 Plug 'junegunn/vim-easy-align'                          " align text
 Plug 'mattn/emmet-vim'                                  " web development multitool
 Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets
+Plug 'altercation/vim-colors-solarized'                 " Solarized theme

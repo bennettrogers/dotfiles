@@ -2,12 +2,6 @@
 " Global Stuff
 "-----------------------------------------------------------------------------
 
-" vim colors
-"if &term =~ "xterm-256color"
-set t_Co=256
-colorscheme xoria256
-"endif
-
 " switch map leader to space
 let mapleader=" "
 
@@ -122,21 +116,3 @@ autocmd BufReadPost *
 " cycle through all open buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
-
-"-----------------------------------------------------------------------------
-" Set up the window colors and size
-"-----------------------------------------------------------------------------
-if has("gui_running")
-    set guifont=Monaco:h12
-    colorscheme xoria256
-    if !exists("g:vimrcloaded")
-        winpos 0 0
-        if ! &diff
-            winsize 130 90
-        else
-            winsize 227 90
-        endif
-        let g:vimrcloaded = 1
-    endif
-endif
-:nohls

@@ -120,7 +120,7 @@ if $INTERACTIVE_SESSION; then
     PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
 
     # Current directory
-    PS1=$PS1"${bldblu}\w"
+    PS1=$PS1"${txtblu}\w"
 
     # Current git branch
     if type __git_ps1 >/dev/null 2>&1; then

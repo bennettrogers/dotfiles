@@ -5,8 +5,8 @@ set spell spelllang=en_us
 " Note: for now we have to force-initialize lightline
 " or else an error is thrown when Goyo tries to disable it.
 " Hopefully we can remove this someday...
-call lightline#init()
-Goyo
+" call lightline#init()
+" Goyo
 
 " Initialize vim-pencil
 call pencil#init({'wrap': 'soft'})

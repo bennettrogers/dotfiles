@@ -19,6 +19,7 @@ Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }   " javascript completion
 Plug 'haya14busa/incsearch.vim'                         " highlight all incremental search matches
 Plug 'haya14busa/vim-asterisk'                          " better * operation handling
 Plug 'pangloss/vim-javascript'                          " javascript friendliness
+Plug 'sheerun/vim-polyglot'| Plug 'othree/html5.vim'    " HTML5 syntax and completion. Depend
 Plug 'elzr/vim-json'                                    " JSON support
 Plug 'Shutnik/jshint2.vim'                              " jshint support
 Plug 'mhinz/vim-signify'                                " gitgutter replacement

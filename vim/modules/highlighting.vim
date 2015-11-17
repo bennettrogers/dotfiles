@@ -4,12 +4,6 @@ set hlsearch
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-
 function! s:after_colorscheme()
   " Make spelling problems easier to read.
   highlight clear SpellBad
@@ -28,6 +22,14 @@ function! s:after_colorscheme()
 
   " Make conceal look better.
   highlight Conceal cterm=bold ctermbg=NONE ctermfg=67
+
+  " Highlight extra whitespace with red
+  highlight ExtraWhitespace ctermbg=red guibg=red
+  match ExtraWhitespace /\s\+$/
+  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 endfunction
 
 augroup after_colorscheme

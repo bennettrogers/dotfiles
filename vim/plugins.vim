@@ -14,12 +14,11 @@ Plug 'FelikZ/ctrlp-py-matcher'                          " faster ctrlp matching 
 Plug 'Lokaltog/vim-easymotion'                          " easy moving within a file
 Plug 'Keithbsmiley/tmux.vim'                            " tmux conf syntax highlighting
 Plug 'Raimondi/delimitMate'                             " Auto-closing parens and quotes
-Plug 'Valloric/YouCompleteMe'                           " autocompletion
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }   " javascript completion
 Plug 'haya14busa/incsearch.vim'                         " highlight all incremental search matches
 Plug 'haya14busa/vim-asterisk'                          " better * operation handling
 Plug 'pangloss/vim-javascript'                          " javascript friendliness
-Plug 'sheerun/vim-polyglot'| Plug 'othree/html5.vim'    " HTML5 syntax and completion. Depend
+Plug 'sheerun/vim-polyglot'| Plug 'othree/html5.vim'    " HTML5 syntax and completion
 Plug 'elzr/vim-json'                                    " JSON support
 Plug 'Shutnik/jshint2.vim'                              " jshint support
 Plug 'mhinz/vim-signify'                                " gitgutter replacement
@@ -38,3 +37,4 @@ Plug 'junegunn/vim-easy-align'                          " align text
 Plug 'mattn/emmet-vim'                                  " web development multitool
 Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets
 Plug 'altercation/vim-colors-solarized'                 " Solarized theme
+" Plug 'Valloric/YouCompleteMe'                           " autocompletion

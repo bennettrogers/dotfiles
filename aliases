@@ -1,5 +1,5 @@
-# yolo = sudo
-alias yolo='sudo'
+# Use neovim when installed
+type nvim &>/dev/null && alias vim=nvim
 
 # Color grep output
 alias grep='grep --color=auto'

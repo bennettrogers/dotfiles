@@ -9,8 +9,6 @@ Plug 'tpope/vim-fugitive'                               " git helpers
 Plug 'tpope/vim-surround'                               " smart surrounding (parens, quotes, etc)
 Plug 'tpope/vim-vinegar'                                " project browser in split window
 Plug 'tpope/vim-sleuth'                                 " tries to match indent settings with what already exists in file
-Plug 'ctrlpvim/ctrlp.vim'                               " fuzzy file search and open
-Plug 'FelikZ/ctrlp-py-matcher'                          " faster ctrlp matching using python
 Plug 'Lokaltog/vim-easymotion'                          " easy moving within a file
 Plug 'Keithbsmiley/tmux.vim'                            " tmux conf syntax highlighting
 Plug 'Raimondi/delimitMate'                             " Auto-closing parens and quotes
@@ -31,10 +29,12 @@ Plug 'terryma/vim-multiple-cursors'                     " sublime-style multiple
 Plug 'junegunn/goyo.vim'                                " distraction-free writing
 Plug 'reedes/vim-pencil'                                " makes writing text (e.g. markdown) in vim easier
 Plug 'majutsushi/tagbar'                                " shows the current symbols from this file
-Plug 'itchyny/lightline.vim'                            " lightweight statusline
 Plug 'rodjek/vim-puppet'                                " makes vim puppet-friendly
 Plug 'junegunn/vim-easy-align'                          " align text
 Plug 'mattn/emmet-vim'                                  " web development multitool
 Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets
 Plug 'altercation/vim-colors-solarized'                 " Solarized theme
 Plug 'rizzatti/dash.vim'                                " Dash integration for OSX
+Plug 'vim-ctrlspace/vim-ctrlspace'                      " Tab and buffer manager
+Plug 'vim-airline/vim-airline'                          " Statusline customization utility
+Plug 'vim-airline/vim-airline-themes'                   " Color themes for airline

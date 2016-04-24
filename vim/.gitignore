@@ -2,4 +2,5 @@
 undo/
 spell/
 plugged/
+autoload/plug.vim
 revert.sh

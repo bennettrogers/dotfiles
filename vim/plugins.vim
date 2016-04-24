@@ -37,4 +37,3 @@ Plug 'junegunn/vim-easy-align'                          " align text
 Plug 'mattn/emmet-vim'                                  " web development multitool
 Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets
 Plug 'altercation/vim-colors-solarized'                 " Solarized theme
-" Plug 'Valloric/YouCompleteMe'                           " autocompletion

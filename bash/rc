@@ -114,7 +114,7 @@ if $INTERACTIVE_SESSION; then
     GIT_PS1_SHOWDIRTYSTATE=true
 
     # Username@host
-    PS1="${txtcyn}\u${txtblu}@${bldpur}\h${txtwht}:"
+    PS1="${txtcyn}\u${txtblu}@${txtgrn}\h${txtwht}:"
 
     # Stopped process count
     PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'

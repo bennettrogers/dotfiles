@@ -18,7 +18,6 @@ Plug 'haya14busa/vim-asterisk'                          " better * operation han
 Plug 'pangloss/vim-javascript'                          " javascript friendliness
 Plug 'sheerun/vim-polyglot'| Plug 'othree/html5.vim'    " HTML5 syntax and completion
 Plug 'elzr/vim-json'                                    " JSON support
-Plug 'Shutnik/jshint2.vim'                              " jshint support
 Plug 'mhinz/vim-signify'                                " gitgutter replacement
 Plug 'nathanaelkane/vim-indent-guides'                  " displays indent levels
 Plug 'luochen1990/rainbow'                              " rainbow parentheses

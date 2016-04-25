@@ -1,6 +1,6 @@
 " Use ag for searching
 if executable("ag")
-  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+  let g:CtrlSpaceGlobCommand = 'ag -l --hidden --nocolor -g ""'
 endif
 
 " Open ctrlspace with the default ctrl-p binding

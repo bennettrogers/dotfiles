@@ -116,3 +116,6 @@ autocmd BufReadPost *
 " cycle through all open buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+
+" shortcut to write the current buffer
+nmap <leader>w :w<CR>

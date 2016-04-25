@@ -26,8 +26,8 @@ alias gpg='gpg2 --display-charset utf-8'
 
 # Use OS X specific config file for Tmux
 if command -v reattach-to-user-namespace &>/dev/null; then
-    alias tmux='tmux -f ~/.tmux.osx.conf'
+    alias tmux='tmux -f ~/.tmux/conf/tmux.osx.conf'
 else
     alias tmux='read -p "reattach-to-user-namespace is not installed.
-Clipboard integration and launchctl will not function in Tmux." && tmux'
+Clipboard integration and launchctl will not function in Tmux." && tmux -f ~/.tmux/conf/tmux.conf'
 fi

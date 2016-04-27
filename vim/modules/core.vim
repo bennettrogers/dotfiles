@@ -119,3 +119,7 @@ nmap <C-p> :bprev<CR>
 
 " shortcut to write the current buffer
 nmap <leader>w :w<CR>
+
+" avoid using esc (note: can also use <C-[> by default)
+inoremap kj <Esc>
+inoremap <esc> <nop>

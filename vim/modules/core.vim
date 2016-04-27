@@ -124,3 +124,6 @@ nmap <leader>w :w<CR>
 inoremap kj <Esc>
 inoremap <esc> <nop>
 inoremap <C-c> <nop>
+
+" yank to the system clipboard
+set clipboard=unnamed

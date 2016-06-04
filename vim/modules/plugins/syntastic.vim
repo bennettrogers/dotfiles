@@ -28,6 +28,5 @@ let g:syntastic_html_checkers=['tidy']
 let g:syntastic_css_csslint_quiet_messages = {
 \   "regex":[
 \     "IE6",
-\     "!important"
 \   ]
 \ }

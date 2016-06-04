@@ -4,7 +4,10 @@ function! ToggleErrors()
          Errors
     else
         lclose
+        cclose
     endif
 endfunction
 
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
+
+cnoreabbrev help vert help

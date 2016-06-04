@@ -8,3 +8,10 @@ nnoremap <silent><C-p> :CtrlSpace O<CR>
 
 " Set the search delay how I like it
 let g:CtrlSpaceSearchTiming = 150
+
+" Customize the project root markers
+let g:CtrlSpaceProjectRootMarkers = [
+\   ".git",
+\   ".hg",
+\   "node_modules",
+\ ]

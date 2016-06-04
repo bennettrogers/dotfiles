@@ -117,8 +117,11 @@ autocmd BufReadPost *
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
-" shortcut to write the current buffer
+" write the current buffer
 nmap <leader>w :w<CR>
+
+" quit the current buffer
+nmap <leader>q :q<CR>
 
 " avoid using esc (note: can also use <C-[> by default)
 inoremap kj <Esc>

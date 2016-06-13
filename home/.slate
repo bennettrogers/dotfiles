@@ -91,8 +91,8 @@ bind p:ctrl;cmd  ${bottomRight}
 bind 1:ctrl;alt         throw 0 resize
 bind 2:ctrl;alt         throw 1 resize
 bind 3:ctrl;alt         throw 2 resize
-bind right:ctrl;alt     throw right resize
-bind left:ctrl;alt      throw left  resize
+bind left:ctrl;alt      ${monitorLeft}
+bind right:ctrl;alt     ${monitorRight}
 
 # Resize
 bind left:ctrl;alt;cmd          resize -10% +0

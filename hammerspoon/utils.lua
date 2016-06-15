@@ -1,3 +1,8 @@
+-- Display a notification
+function notify(title, message)
+   hs.notify.new({title=title, informativeText=message}):send()
+end
+
 -- Create hotkeys for each key config pair
 local hotkeys = {}
 function createHotkeys()
@@ -26,4 +31,9 @@ function reloadConfig(files)
       return
     end
   end
+end
+
+-- Test new functions
+function test()
+  -- hs.spotify.pause()
 end

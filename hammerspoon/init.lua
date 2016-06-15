@@ -7,11 +7,17 @@ screen = require "hs.screen"
 grid = require "hs.grid"
 appfinder = require "hs.appfinder"
 
- 
+-- Uncomment to set non-default log level
+-- hs.logger.defaultLogLevel = 'debug'
+
+logger = hs.logger.new('main')
+
+
 -- Load custom modules
 require "preload"
-require "grid"
 require "utils"
+require "music"
+require "grid"
 
 
 function init()
@@ -27,16 +33,20 @@ end
 definitions = {
 
   -- grid push
-  left = gridset(goLeft),
-  right = gridset(goRight),
-  up = gridset(goUp),
-  down = gridset(goDown),
+  h = gridset(goLeft),
+  j = gridset(goDown),
+  l = gridset(goRight),
+  k = gridset(goUp),
+  y = gridset(goTopLeft),
+  u = gridset(goTopRight),
+  b = gridset(goBottomleft),
+  n = gridset(goBottomRight),
 
   -- grid move
-  h = grid.pushWindowLeft,
-  j = grid.pushWindowDown,
-  l = grid.pushWindowRight,
-  k = grid.pushWindowUp,
+  left  = grid.pushWindowLeft,
+  down  = grid.pushWindowDown,
+  right = grid.pushWindowRight,
+  up    = grid.pushWindowUp,
 
   -- grid resize
   ["="] = grid.resizeWindowTaller,
@@ -47,8 +57,9 @@ definitions = {
   -- grid maximize
   m = grid.maximizeWindow,
 
-  -- grid snap
-  n = function() grid.snap(window.focusedWindow()) end
+  -- test new functions (from utils)
+  ["`"] = test,
+
 }
 
 init()

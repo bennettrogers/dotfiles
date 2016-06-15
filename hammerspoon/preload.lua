@@ -1,5 +1,10 @@
 -- stuff to always load/set first
 
+-- Uncomment to set non-default log level
+hs.logger.defaultLogLevel = 'debug'
+logger = hs.logger.new('main')
+
+
 -- no animation duration makes for smoother transitions
 hs.window.animationDuration = 0
 

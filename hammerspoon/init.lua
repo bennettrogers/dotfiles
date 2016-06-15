@@ -22,44 +22,42 @@ require "grid"
 
 function init()
   -- Bind hotkeys
-  createHotkeys()
-  -- If we hook up a keyboard, rebind keys
-  keycodes.inputSourceChanged(rebindHotkeys)
-
+  createBindings()
   alert.show("Config loaded", 1)
 end
 
--- Define hotkey functionality
-definitions = {
+-- Define hotkeys
+bind = hs.hotkey.bind
+function createBindings()
 
   -- grid push
-  h = gridset(goLeft),
-  j = gridset(goDown),
-  l = gridset(goRight),
-  k = gridset(goUp),
-  y = gridset(goTopLeft),
-  u = gridset(goTopRight),
-  b = gridset(goBottomLeft),
-  n = gridset(goBottomRight),
+  bind(hyper, 'h', gridset(goLeft))
+  bind(hyper, 'j', gridset(goDown))
+  bind(hyper, 'l', gridset(goRight))
+  bind(hyper, 'k', gridset(goUp))
+  bind(hyper, 'y', gridset(goTopLeft))
+  bind(hyper, 'u', gridset(goTopRight))
+  bind(hyper, 'b', gridset(goBottomLeft))
+  bind(hyper, 'n', gridset(goBottomRight))
 
   -- grid move
-  left  = grid.pushWindowLeft,
-  down  = grid.pushWindowDown,
-  right = grid.pushWindowRight,
-  up    = grid.pushWindowUp,
+  bind(hyper, 'left', grid.pushWindowLeft)
+  bind(hyper, 'down', grid.pushWindowDown)
+  bind(hyper, 'right', grid.pushWindowRight)
+  bind(hyper, 'up', grid.pushWindowUp)
 
   -- grid resize
-  ["="] = grid.resizeWindowTaller,
-  ["-"] = grid.resizeWindowShorter,
-  ["["] = grid.resizeWindowThinner,
-  ["]"] = grid.resizeWindowWider,
+  bind(hyper, '=', grid.resizeWindowTaller)
+  bind(hyper, '-', grid.resizeWindowShorter)
+  bind(hyper, '[', grid.resizeWindowThinner)
+  bind(hyper, ']', grid.resizeWindowWider)
 
   -- grid maximize
-  m = grid.maximizeWindow,
+  bind(hyper, 'm', grid.maximizeWindow)
 
-  -- test new functions (from utils)
-  ["`"] = test,
+  -- test new functions (defined in utils)
+  bind(hyper, '`', test)
 
-}
+end
 
 init()

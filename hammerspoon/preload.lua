@@ -27,3 +27,4 @@ std = hs.stdlib and require("hs.stdlib")
 
 -- activation keys
 hyper = {"cmd", "ctrl"}
+hypershift = {"cmd", "ctrl", "shift"}

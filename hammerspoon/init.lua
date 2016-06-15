@@ -39,7 +39,7 @@ definitions = {
   k = gridset(goUp),
   y = gridset(goTopLeft),
   u = gridset(goTopRight),
-  b = gridset(goBottomleft),
+  b = gridset(goBottomLeft),
   n = gridset(goBottomRight),
 
   -- grid move

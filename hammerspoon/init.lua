@@ -12,12 +12,12 @@ appfinder = require "hs.appfinder"
 
 logger = hs.logger.new('main')
 
-
 -- Load custom modules
 require "preload"
 require "utils"
 require "music"
 require "grid"
+require "ssid"
 
 
 function init()
@@ -29,6 +29,10 @@ end
 -- Define hotkeys
 bind = hs.hotkey.bind
 function createBindings()
+
+  --
+  -- Window management
+  --
 
   -- grid push
   bind(hyper, 'h', gridset(goLeft))
@@ -54,6 +58,27 @@ function createBindings()
 
   -- grid maximize
   bind(hyper, 'm', grid.maximizeWindow)
+
+
+  --
+  -- Music management
+  --
+
+  -- play/pause spotify
+  bind(hyper, 'p', hs.spotify.playpause)
+
+
+  --
+  -- Application management
+  --
+
+  -- Launch or focus various apps
+  bind(ctrl, '2', function() hs.application.launchOrFocus('iTerm') end)
+  bind(ctrl, '3', function() hs.application.launchOrFocus('Google Chrome') end)
+
+  -- focus last iterm window
+  -- TODO: Make this work once app watchers are sorted out
+  -- bind(hyper, 'i', function(){})
 
   -- test new functions (defined in utils)
   bind(hyper, '`', test)

@@ -26,5 +26,6 @@ pbcopy = hs.pasteboard.setContents
 std = hs.stdlib and require("hs.stdlib")
 
 -- activation keys
+ctrl = {"ctrl"}
 hyper = {"cmd", "ctrl"}
 hypershift = {"cmd", "ctrl", "shift"}

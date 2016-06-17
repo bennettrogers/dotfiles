@@ -3,6 +3,9 @@ if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --hidden --nocolor -g ""'
 endif
 
+" Don't index/search in certain locations
+let g:CtrlSpaceIgnoredFiles = 'node_modules[\/]'
+
 " Open ctrlspace with the default ctrl-p binding
 nnoremap <silent><C-p> :CtrlSpace O<CR>
 

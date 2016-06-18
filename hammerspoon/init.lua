@@ -66,6 +66,7 @@ function createBindings()
 
   -- play/pause spotify
   bind(hyper, 'p', hs.spotify.playpause)
+  bind(hyper, 't', hs.spotify.displayCurrentTrack)
 
 
   --

@@ -12,6 +12,7 @@ Plug 'rking/ag.vim'                                     " use silver searcher fo
 Plug 'sjl/gundo.vim'                                    " graphical undo tree
 Plug 'tpope/vim-surround'                               " smart surrounding (parens, quotes, etc)
 Plug 'tpope/vim-sleuth'                                 " tries to match indent settings with what already exists in file
+Plug 'tpope/vim-unimpaired'                             " shortcuts for common paired actions (e.g. next/prev error)
 
  " Window / UI
 Plug 'vim-ctrlspace/vim-ctrlspace'                      " tab and buffer manager
@@ -29,7 +30,7 @@ Plug 'edkolev/tmuxline.vim'                             " tmux statusline genera
 Plug 'nathanaelkane/vim-indent-guides'                  " displays indent levels
 
 " Language and syntax support
-Plug 'scrooloose/syntastic'                             " automatic syntax checking (e.g. JSHint linting)
+Plug 'neomake/neomake'                                  " automatic syntax checking (e.g. JSHint linting)
 Plug 'mattn/emmet-vim'                                  " web development multitool
 Plug 'mattn/webapi-vim'                                 " api for emmet that enables custom snippets
 Plug 'sheerun/vim-polyglot'| Plug 'othree/html5.vim'    " hTML5 syntax and completion

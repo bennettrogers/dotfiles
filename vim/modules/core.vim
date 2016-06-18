@@ -130,3 +130,15 @@ inoremap <C-c> <nop>
 
 " yank to the system clipboard
 set clipboard=unnamed
+
+" TODO: create a 'navigation' module
+" jump to the next error
+function! LocationNext()
+  try
+    lnext
+  catch
+    try | lfirst | catch | endtry
+  endtry
+endfunction
+
+nnoremap <leader>e :call LocationNext()<cr>

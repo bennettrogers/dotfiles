@@ -1,3 +1,5 @@
+" HTML stuff
+
 " Note: don't do this yet:
 " 1) neomake doesn't support it yet
 " 2) i'm not currently using js in html files (unless i go back to polymer)

@@ -1,10 +1,7 @@
 " Set up colors once colorscheme plugin has loaded
-" if &term =~ "xterm-256color"
-set t_Co=256
 syntax enable
 set background=dark
 colorscheme solarized
-" endif
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size

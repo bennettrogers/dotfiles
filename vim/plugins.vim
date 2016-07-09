@@ -22,7 +22,7 @@ Plug 'junegunn/goyo.vim'                                            " distractio
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
 
-" Styling
+" " Styling
 Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
 Plug 'vim-airline/vim-airline-themes'                               " color themes for airline
@@ -36,11 +36,12 @@ Plug 'mattn/webapi-vim'                                             " api for em
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }               " javascript completion
 Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting
 Plug 'elzr/vim-json'                                                " json support
 Plug 'rodjek/vim-puppet'                                            " makes vim puppet-friendly
 Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
-Plug 'luochen1990/rainbow'                                          " rainbow parentheses
 Plug 'Raimondi/delimitMate'                                         " auto-closing parens and quotes
 Plug 'junegunn/vim-easy-align'                                      " align text
 Plug 'tpope/vim-commentary'                                         " easy commenting

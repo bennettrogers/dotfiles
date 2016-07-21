@@ -3,6 +3,14 @@ syntax enable
 set background=dark
 colorscheme OceanicNext
 
+" Specify which terms to italicize
+highlight htmlArg gui=italic
+highlight Comment gui=italic
+highlight Type    gui=italic
+highlight htmlArg cterm=italic
+highlight Comment cterm=italic
+highlight Type    cterm=italic
+
 " Set Airline theme
 let g:airline_theme='oceanicnext'
 

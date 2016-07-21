@@ -25,7 +25,6 @@ Plug 'Lokaltog/vim-easymotion'                                      " easy movin
 " " Styling
 Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
-Plug 'vim-airline/vim-airline-themes'                               " color themes for airline
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
 
@@ -36,6 +35,7 @@ Plug 'mattn/webapi-vim'                                             " api for em
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }               " javascript completion
 Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
+Plug 'posva/vim-vue'                                                " Vue.js support
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting

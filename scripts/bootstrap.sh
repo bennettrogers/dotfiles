@@ -7,11 +7,11 @@ pushd $HOME
 
 # Configurable parameters
 dotfiles_owner='bennettrogers'
-joint_packages='git tmux vim bash-completion'
+joint_packages='git tmux vim bash-completion npm'
 osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace'
 linux_packages='python-pip exuberant-ctags'
 pip_packages='virtualenvwrapper pyflakes'
-brew_packages='diff-so-fancy'
+brew_packages='diff-so-fancy' # TODO: install with npm for linux
 
 # Don't touch these
 unamestr=`uname -s`

@@ -106,6 +106,12 @@ fi
 
 for r in $repos; do $HOMESHICK_BIN --batch --force symlink $r; done
 
+# sync vim plugins
+$HOME/.homesick/repos/dotfiles/vim/sync.sh
+
+# install terminfo
+tic $HOME/.homesick/repos/dotfiles/iterm/xterm-256color-italic.terminfo
+
 # Go back whence you came
 popd
 

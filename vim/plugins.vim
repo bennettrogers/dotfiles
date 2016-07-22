@@ -21,18 +21,19 @@ Plug 'mhinz/vim-signify'                                            " gitgutter 
 Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
-
-" " Styling
-Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
+
+" Styling
+Plug 'chriskempson/base16-vim'                                      " collection of colorschemes
+Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme (currently only used for its airline theme)
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
 
 " Language and syntax support
 Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }               " javascript completion
+" Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }               " javascript completion
 Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
 Plug 'posva/vim-vue'                                                " Vue.js support

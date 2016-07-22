@@ -1,15 +1,15 @@
 " Set up colors once colorscheme plugin has loaded
 syntax enable
 set background=dark
-colorscheme OceanicNext
+colorscheme base16-oceanicnext
 
 " Specify which terms to italicize
 highlight htmlArg gui=italic
-highlight Comment gui=italic
-highlight Type    gui=italic
 highlight htmlArg cterm=italic
+highlight Comment gui=italic
 highlight Comment cterm=italic
-highlight Type    cterm=italic
+highlight Todo    gui=italic
+highlight Todo    cterm=italic
 
 " Set Airline theme
 let g:airline_theme='oceanicnext'
@@ -19,7 +19,7 @@ let g:airline_theme='oceanicnext'
 "-----------------------------------------------------------------------------
 if has("gui_running")
     set guifont=Monaco:h12
-    colorscheme OceanicNext
+    colorscheme base16-oceanicnext
     if !exists("g:vimrcloaded")
         winpos 0 0
         if ! &diff

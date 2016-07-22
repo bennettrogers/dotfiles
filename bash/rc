@@ -135,6 +135,9 @@ if $INTERACTIVE_SESSION; then
     # Prioritize local bins in path
     export PATH="$HOME/bin:$PATH"
 
+    # set the terminfo
+    export TERM="xterm-256color-italic"
+
 fi
 
 ##############################################################################

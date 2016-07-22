@@ -11,7 +11,7 @@ joint_packages='git tmux vim bash-completion npm'
 osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace'
 linux_packages='python-pip exuberant-ctags'
 pip_packages='virtualenvwrapper pyflakes'
-brew_packages='diff-so-fancy' # TODO: install with npm for linux
+npm_packages='diff-so-fancy'
 
 # Don't touch these
 unamestr=`uname -s`
@@ -45,9 +45,6 @@ elif [[ $platform == 'osx' ]]; then
     if ! which brew; then
         ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
     fi
-
-    # Install brew packages
-    brew install $brew_packages
 fi
 
 # YUM SPECIFIC: We need EPEL (required for pip on ScientificLinux)
@@ -70,6 +67,9 @@ fi
 
 # Install pip packages
 sudo $PIP install $pip_packages
+
+# Install npm packages
+sudo npm install -g $npm_packages
 
 # # Install newest ruby and rbenv
 # [ ! -e "$HOME/.rbenv" ] && git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"

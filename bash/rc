@@ -114,13 +114,13 @@ if $INTERACTIVE_SESSION; then
     GIT_PS1_SHOWDIRTYSTATE=true
 
     # Username@host
-    PS1="${txtcyn}\u${txtblu}@${txtgrn}\h${txtwht}:"
+    PS1="${txtcyn}\u${txtblu}@${txtgrn}\h"
 
     # Stopped process count
-    PS1=$PS1${txtylw}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo "[\j]"; fi )'
+    PS1=$PS1${txtpur}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo " [\j]"; fi )'
 
     # Current directory
-    PS1=$PS1"${txtblu}\w"
+    PS1=$PS1${txtblu}" \w"
 
     # Current git branch
     if type __git_ps1 >/dev/null 2>&1; then
@@ -128,7 +128,7 @@ if $INTERACTIVE_SESSION; then
     fi
 
     # Finish the prompt
-    PS1=$PS1"$txtwht\$ $txtdef"
+    PS1=$PS1"\n${txtwht}\$ ${txtdef}"
 
     ##########################################################################
 

@@ -94,14 +94,6 @@ stty -ixon
 
 if $INTERACTIVE_SESSION; then
 
-    # autostart tmux
-    if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
-    then
-        STARTED_TMUX=1; export STARTED_TMUX
-        ~/.local/bin/tmux-shared remote
-        echo "tmux failed to start"
-    fi
-
     # activate virtualenvwrapper (lazy means it won't be sourced until needed)
     if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
         source /usr/local/bin/virtualenvwrapper_lazy.sh
@@ -136,7 +128,20 @@ if $INTERACTIVE_SESSION; then
     export PATH="$HOME/bin:$PATH"
 
     # set the terminfo
-    export TERM="xterm-256color-italic"
+    if infocmp tmux-256color-italic; then
+        export TERM="xterm-256color-italic"
+    else
+        echo "Custom terminal mode not available... falling back to xterm-256color"
+        export TERM="xterm-256color"
+    fi
+
+    # autostart tmux
+    if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
+    then
+        STARTED_TMUX=1; export STARTED_TMUX
+        ~/.local/bin/tmux-shared remote
+        echo "tmux failed to start"
+    fi
 
 fi
 

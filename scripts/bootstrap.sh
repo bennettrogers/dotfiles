@@ -13,6 +13,23 @@ linux_packages='python-pip exuberant-ctags'
 pip_packages='virtualenvwrapper pyflakes'
 npm_packages='diff-so-fancy'
 
+
+# get args
+while [[ $# -gt 0 ]]
+do
+key="$1"
+
+case $key in
+    -i|--install)
+    INSTALL=YES
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+shift # past argument or value
+done
+
 # Don't touch these
 unamestr=`uname -s`
 platform=''
@@ -27,49 +44,51 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
     platform='osx'
 fi
 
-# Set the correct installtool
-if [[ $platform == 'linux' ]]; then
-    if [[ -x "$(which apt-get)" ]]; then
-        installtool='apt-get'
-    elif [[ -x "$(which yum)" ]]; then
-        installtool='yum'
+if [[ ${INSTALL} == 'YES' ]]; then
+    # Set the correct installtool
+    if [[ $platform == 'linux' ]]; then
+        if [[ -x "$(which apt-get)" ]]; then
+            installtool='apt-get'
+        elif [[ -x "$(which yum)" ]]; then
+            installtool='yum'
+        fi
+
+        if [[ `whoami` != 'root' ]]; then
+            installtool='sudo '$installtool
+        fi
+        installtoolflags='-y'
+    elif [[ $platform == 'osx' ]]; then
+        installtool='brew'
+        # Install Homebrew if not installed
+        if ! which brew; then
+            ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+        fi
     fi
 
-    if [[ `whoami` != 'root' ]]; then
-        installtool='sudo '$installtool
+    # YUM SPECIFIC: We need EPEL (required for pip on ScientificLinux)
+    if [[ $installtool == 'yum' || $installtool == 'sudo yum' ]]; then
+        $installtool $installtoolflags install epel-release.noarch
     fi
-    installtoolflags='-y'
-elif [[ $platform == 'osx' ]]; then
-    installtool='brew'
-    # Install Homebrew if not installed
-    if ! which brew; then
-        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+    # Install packages with installtool
+    $installtool $installtoolflags update
+    $installtool $installtoolflags install $joint_packages
+    if [[ $platform = 'osx' ]]; then
+        $installtool install $installtoolflags $osx_packages
+        # Careful, this will overwrite anything else in .bashrc_local
+        echo 'export PATH="$PATH:/usr/local/share/python"' > $HOME/.bashrc_local
+        PIP=/usr/local/bin/pip
+    else
+        $installtool $installtoolflags install $linux_packages
+        PIP=pip
     fi
+
+    # Install pip packages
+    sudo $PIP install $pip_packages
+
+    # Install npm packages
+    sudo npm install -g $npm_packages
 fi
-
-# YUM SPECIFIC: We need EPEL (required for pip on ScientificLinux)
-if [[ $installtool == 'yum' || $installtool == 'sudo yum' ]]; then
-    $installtool $installtoolflags install epel-release.noarch
-fi
-
-# Install packages with installtool
-$installtool $installtoolflags update
-$installtool $installtoolflags install $joint_packages
-if [[ $platform = 'osx' ]]; then
-    $installtool install $installtoolflags $osx_packages
-    # Careful, this will overwrite anything else in .bashrc_local
-    echo 'export PATH="$PATH:/usr/local/share/python"' > $HOME/.bashrc_local
-    PIP=/usr/local/bin/pip
-else
-    $installtool $installtoolflags install $linux_packages
-    PIP=pip
-fi
-
-# Install pip packages
-sudo $PIP install $pip_packages
-
-# Install npm packages
-sudo npm install -g $npm_packages
 
 # # Install newest ruby and rbenv
 # [ ! -e "$HOME/.rbenv" ] && git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"

@@ -26,9 +26,9 @@ source $rcfiles/aliases
 source $rcfiles/bash/completion
 
 # Source platform-specific bashrc files
-if [ "$system" == 'Linux' ]; then
-    source $rcfiles/bash/rc.linux
-fi
+# if [ "$system" == 'Linux' ]; then
+#     source $rcfiles/bash/rc.linux
+# fi
 if [ "$system" == 'OSX' ]; then
     source $rcfiles/bash/rc.osx
 fi
@@ -136,11 +136,11 @@ if $INTERACTIVE_SESSION; then
     fi
 
     # autostart tmux
-    if [ "$PS1" != "" -a "${STARTED_TMUX:-x}" = x -a "${SSH_TTY:-x}" != x ]
-    then
-        STARTED_TMUX=1; export STARTED_TMUX
-        ~/.local/bin/tmux-shared remote
-        echo "tmux failed to start"
+    if [ "$PS1" != "" -a "${TMUX}" == "" -a "${SSH_TTY:-x}" != x ]; then
+        # attempt to discover a detached session and attach it,
+        # else create a new session
+        WHOAMI=$(whoami)
+        tmux -f ~/.tmux/conf/tmux.conf new-session -A -s $WHOAMI
     fi
 
 fi

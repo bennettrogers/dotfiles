@@ -128,7 +128,7 @@ if $INTERACTIVE_SESSION; then
     export PATH="$HOME/bin:$PATH"
 
     # set the terminfo
-    if infocmp xterm-256color-italic; then
+    if infocmp xterm-256color-italic &> /dev/null; then
         export TERM="xterm-256color-italic"
     else
         echo "Custom terminal mode not available... falling back to xterm-256color"

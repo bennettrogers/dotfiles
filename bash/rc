@@ -127,13 +127,9 @@ if $INTERACTIVE_SESSION; then
     # Prioritize local bins in path
     export PATH="$HOME/bin:$PATH"
 
-    # set the terminfo
-    if infocmp xterm-256color-italic &> /dev/null; then
-        export TERM="xterm-256color-italic"
-    else
-        echo "Custom terminal mode not available... falling back to xterm-256color"
-        export TERM="xterm-256color"
-    fi
+    # set the terminfo such that it also works via ssh
+    { infocmp -1 xterm-256color ; echo -e "\tsitm=\\E[3m,\n\tritm=\\E[23m,"; } > /tmp/xterm-256color.terminfo
+    tic /tmp/xterm-256color.terminfo
 
     # autostart tmux
     if [ "$PS1" != "" -a "${TMUX}" == "" -a "${SSH_TTY:-x}" != x ]; then

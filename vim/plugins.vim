@@ -11,8 +11,9 @@ Plug 'haya14busa/vim-asterisk'                                      " better * o
 Plug 'mileszs/ack.vim'                                              " search tool
 Plug 'sjl/gundo.vim'                                                " graphical undo tree
 Plug 'tpope/vim-surround'                                           " smart surrounding (parens, quotes, etc)
-Plug 'tpope/vim-sleuth'                                             " tries to match indent settings with what already exists in file
+" Plug 'tpope/vim-sleuth'                                             " tries to match indent settings with what already exists in file
 Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
+Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
 
  " Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
@@ -33,7 +34,6 @@ Plug 'nathanaelkane/vim-indent-guides'                              " displays i
 Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
-" Plug 'marijnh/tern_for_vim', { 'do': 'npm install'  }               " javascript completion
 Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
 Plug 'posva/vim-vue'                                                " Vue.js support
@@ -45,10 +45,11 @@ Plug 'rodjek/vim-puppet'                                            " makes vim 
 Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
 Plug 'Raimondi/delimitMate'                                         " auto-closing parens and quotes
 Plug 'junegunn/vim-easy-align'                                      " align text
-Plug 'tpope/vim-commentary'                                         " easy commenting
+Plug 'tomtom/tcomment_vim'                                          "easy commenting with good support for compound filetypes
 Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file
 Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)
 Plug 'tpope/vim-fugitive'                                           " git helpers
+Plug 'vim-scripts/CSSMinister'

@@ -34,7 +34,7 @@ Plug 'nathanaelkane/vim-indent-guides'                              " displays i
 Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
-Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
+" Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
 Plug 'posva/vim-vue'                                                " Vue.js support
 Plug 'hail2u/vim-css3-syntax'

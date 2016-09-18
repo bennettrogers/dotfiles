@@ -15,11 +15,11 @@ Plug 'tpope/vim-surround'                                           " smart surr
 Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
 Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
 
- " Window / UI
+" Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
 Plug 'tpope/vim-vinegar'                                            " project browser in split window
 Plug 'mhinz/vim-signify'                                            " gitgutter replacement
-Plug 'junegunn/goyo.vim'                                            " distraction-free writing
+" Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
@@ -34,9 +34,8 @@ Plug 'nathanaelkane/vim-indent-guides'                              " displays i
 Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
-" Plug 'othree/yajs.vim'                                              " javascript syntax highlighting (needs to be installed before pangloss)
+Plug 'othree/html5.vim'                                             " support html5 syntax
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
-Plug 'posva/vim-vue'                                                " Vue.js support
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting

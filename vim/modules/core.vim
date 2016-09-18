@@ -19,7 +19,7 @@ let mapleader=" "
 " NOTE: this has to come before set expandtab or it will disable it
 set binary
 
-" Indentation and tab handling
+" Default indentation and tab handling
 set tabstop=4
 set shiftwidth=4
 set expandtab

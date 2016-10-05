@@ -26,9 +26,9 @@ source $rcfiles/aliases
 source $rcfiles/bash/completion
 
 # Source platform-specific bashrc files
-# if [ "$system" == 'Linux' ]; then
-#     source $rcfiles/bash/rc.linux
-# fi
+if [ "$system" == 'Linux' ]; then
+    source $rcfiles/bash/rc.linux
+fi
 if [ "$system" == 'OSX' ]; then
     source $rcfiles/bash/rc.osx
 fi

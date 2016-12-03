@@ -120,7 +120,7 @@ if $INTERACTIVE_SESSION; then
     fi
 
     # Finish the prompt
-    PS1=$PS1"\n${txtwht}\$ ${txtdef}"
+    PS1=$PS1"\n${txtpur}> ${txtdef}"
 
     ##########################################################################
 

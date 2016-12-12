@@ -32,3 +32,6 @@ source $BREW_PREFIX/etc/bash_completion.d/git-prompt.sh
 
 # Add bash completion
 source $BREW_PREFIX/etc/bash_completion
+
+# Add fastlane to the path
+export PATH="$HOME/.fastlane/bin:$PATH"

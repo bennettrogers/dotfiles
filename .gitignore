@@ -1,3 +1,4 @@
 local/share
 vim/autoload
 vim/sessions
+*.log

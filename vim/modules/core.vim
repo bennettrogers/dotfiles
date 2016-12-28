@@ -123,8 +123,8 @@ nmap <leader>w :w<CR>
 " quit the current buffer
 nmap <leader>q :q<CR>
 
-" avoid using ctrl-c for esc (use <C-[> or kj instead)
-inoremap kj <Esc>
+" avoid using ctrl-c for esc (use <C-[> kj instead)
+" inoremap kj <Esc>
 inoremap <C-c> <nop>
 
 " yank to the system clipboard

@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'                                           " smart surr
 " Plug 'tpope/vim-sleuth'                                             " tries to match indent settings with what already exists in file
 Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
 Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
+Plug 'tpope/vim-repeat'                                             " allow for repeating plugin commands
 
 " Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
@@ -42,7 +43,7 @@ Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf 
 Plug 'elzr/vim-json'                                                " json support
 Plug 'rodjek/vim-puppet'                                            " makes vim puppet-friendly
 Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
-Plug 'Raimondi/delimitMate'                                         " auto-closing parens and quotes
+" Plug 'Raimondi/delimitMate'                                         " auto-closing parens and quotes
 Plug 'junegunn/vim-easy-align'                                      " align text
 Plug 'tomtom/tcomment_vim'                                          "easy commenting with good support for compound filetypes
 Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file

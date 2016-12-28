@@ -1,10 +1,19 @@
 /*
+ * PLUGINS TO KEEP AN EYE ON:
+ * * hyperterm-base16-ocean-saturated (he's working on a vim copy of it too)
+ *  - Also, look at this plugin for a lot of ideas:
+ *    - tab title icons
+ *    - cursor shape (hollow beam)
+ *    - cursor fade-blink
+ *
  * TO FIX:
+ * * tmux is somehow changing the cursor to be a block instead of a beam
  * * different font size for non-ascii text (airline)
  * * font colors are too bold (e.g. try `ps ax | grep tmux`)
  * * accent characters coming up when holding `l`
  * * different background color in vim vs. bash (buffer borders)
  *  - I could create my own oceanic colorscheme, and just save it directly in here
+ * * different colorscheme once loading Tmux (mainly background color in vim)
  * * beam cursor is too wide
  *
  */
@@ -40,7 +49,7 @@ module.exports = {
     `,
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    // padding: '12px 14px',
+    padding: '0px 6px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -96,8 +105,9 @@ module.exports = {
   plugins: [
     // `hyperclean`
     // 'hyper-sierra-vibrancy',
-    'hyperterm-oceanic-next'
-    // 'hyperterm-oceanic-next-proper'
+    'hyperterm-oceanic-next',
+    'hyperterm-title',
+    // 'hyperterm-base16-ocean-saturated'
   ],
   // hyperclean: {
   //   hideTabs: true, // default: false 

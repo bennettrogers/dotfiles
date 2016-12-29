@@ -80,6 +80,45 @@ set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 " set the gui options the way I like
 set guioptions=ac
 
+" Folding {{{
+
+" Enable folding
+set foldenable
+
+" Use markers to indicate fold positions (defaults to {{{,}}})
+set foldmethod=marker
+
+" Reset folds and center the cursor
+nnoremap <leader>; zMzvzz
+
+" Toggle the current fold
+nnoremap ; za
+
+" Make the fold text look pretty
+function! NeatFoldText() " {{{2
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = ' ' . substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g') . ' '
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " lines "
+    let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+endf
+" }}}2
+set foldtext=NeatFoldText()
+" }}}
+
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 

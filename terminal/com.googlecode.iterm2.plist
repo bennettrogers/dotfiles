@@ -9980,7 +9980,7 @@
 	<key>MaxVertically</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.homesick/repos/dotfiles</string>
+	<string>~/.homesick/repos/dotfiles/terminal</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -10024,9 +10024,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>0 796 700 622 0 0 3440 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>350 214 796 473 0 0 1440 878 </string>
+	<string>350 262 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1440 874 0 0 1440 878 </string>
+	<string>0 5 1440 873 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>184 200 570 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -10831,7 +10831,7 @@
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
-			<true/>
+			<false/>
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Canonical Parser</key>
@@ -12368,7 +12368,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/bennett/.homesick/repos/dotfiles/iterm</string>
+	<string>/Users/bennett/.homesick/repos/dotfiles/terminal</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -12388,7 +12388,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-28T20:50:20Z</date>
+	<date>2016-12-30T22:23:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

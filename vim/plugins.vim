@@ -29,7 +29,6 @@ Plug 'edkolev/tmuxline.vim'                                         " tmux statu
 " Styling
 Plug 'chriskempson/base16-vim'                                      " collection of colorschemes
 Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme (currently only used for its airline theme)
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
 
 " Language and syntax support

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Default {{{
+txtdef="\[\e[0m\]"  # Revert to default
+# }}}
+
+# Formats {{{
+txtbld="\[\e[1m\]" # Bold
+txtitl="\[\e[3m\]" # Italic
+txtund="\[\e[4m\]" # Underline
+# }}}
+
+#Regular {{{
+txtblk="\[\e[30m\]" # Black
+txtred="\[\e[31m\]" # Red
+txtgrn="\[\e[32m\]" # Green
+txtylw="\[\e[33m\]" # Yellow
+txtblu="\[\e[34m\]" # Blue
+txtpur="\[\e[35m\]" # Purple
+txtcyn="\[\e[36m\]" # Cyan
+txtwht="\[\e[37m\]" # White
+# }}}
+
+#Background {{{
+bakblk="\[\e[40m\]" # Black
+bakred="\[\e[41m\]" # Red
+badgrn="\[\e[42m\]" # Green
+bakylw="\[\e[43m\]" # Yellow
+bakblu="\[\e[44m\]" # Blue
+bakpur="\[\e[45m\]" # Purple
+bakcyn="\[\e[46m\]" # Cyan
+bakwht="\[\e[47m\]" # White
+# }}}

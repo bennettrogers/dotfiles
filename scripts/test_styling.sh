@@ -12,3 +12,6 @@ awk 'BEGIN{
     }
     printf "\n";
 }'
+echo $'\e[1mbold\e[0m'
+echo $'\e[3mitalic\e[0m'
+echo $'\e[4munderline\e[0m'

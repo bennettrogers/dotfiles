@@ -17,7 +17,7 @@ if [ -f ~/.bash_local ]; then
 fi
 
 # Source color aliases
-source $rcfiles/bash/colors
+source $rcfiles/bash/styling
 
 # Source aliases settings
 source $rcfiles/aliases
@@ -106,17 +106,17 @@ if $INTERACTIVE_SESSION; then
     GIT_PS1_SHOWDIRTYSTATE=true
 
     # Username@host
-    PS1="${txtcyn}\u${txtblu}@${txtgrn}\h"
+    PS1="${txtitl}${txtcyn}\u${txtblu}@${txtgrn}\h${txtdef}"
 
     # Stopped process count
-    PS1=$PS1${txtpur}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo " [\j]"; fi )'
+    PS1=$PS1${txtpur}'$( if [ $(jobs -s | wc -l) -gt 0 ]; then echo " [\j]"; fi )'${txtdef}
 
     # Current directory
-    PS1=$PS1${txtblu}" \w"
+    PS1=$PS1${txtblu}" \w"${txtdef}
 
     # Current git branch
     if type __git_ps1 >/dev/null 2>&1; then
-        PS1=$PS1${txtylw}'$(__git_ps1 " (%s)")'
+        PS1=$PS1${txtylw}'$(__git_ps1 " (%s)")'${txtdef}
     fi
 
     # Finish the prompt
@@ -128,8 +128,7 @@ if $INTERACTIVE_SESSION; then
     export PATH="$HOME/bin:$PATH"
 
     # set the terminfo such that it also works via ssh
-    { infocmp -1 xterm-256color ; echo -e "\tsitm=\\E[3m,\n\tritm=\\E[23m,"; } > /tmp/xterm-256color.terminfo
-    tic /tmp/xterm-256color.terminfo
+    # tic /tmp/tmux-256color-italic
 
     # autostart tmux
     if [ "$PS1" != "" -a "${TMUX}" == "" -a "${SSH_TTY:-x}" != x ]; then

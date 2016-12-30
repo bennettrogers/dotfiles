@@ -88,6 +88,9 @@ set foldenable
 " Use markers to indicate fold positions (defaults to {{{,}}})
 set foldmethod=marker
 
+" Don't fold on open
+set foldlevelstart=99
+
 " Reset folds and center the cursor
 nnoremap <leader>; zMzvzz
 

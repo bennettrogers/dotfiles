@@ -10024,7 +10024,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>0 796 700 622 0 0 3440 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>350 262 796 473 0 0 1440 878 </string>
+	<string>350 218 918 495 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 5 1440 873 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -10315,7 +10315,7 @@
 				<real>0.072135128080844879</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>

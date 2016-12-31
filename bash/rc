@@ -124,6 +124,12 @@ if $INTERACTIVE_SESSION; then
 
     ##########################################################################
 
+    # Set the cursor shape to a bar always. Hopefully neovim enables cursor detection later
+    reset-cursor() {
+        printf '\033]50;CursorShape=1\x7'
+    }
+    export PS1="$(reset-cursor)$PS1"
+
     # Prioritize local bins in path
     export PATH="$HOME/bin:$PATH"
 

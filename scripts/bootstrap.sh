@@ -7,10 +7,10 @@ pushd $HOME
 
 # Configurable parameters
 dotfiles_owner='bennettrogers'
-joint_packages='git tmux vim bash-completion npm'
+joint_packages='git vim bash-completion npm'
 osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace'
 linux_packages='python-pip exuberant-ctags'
-pip_packages='virtualenvwrapper pyflakes'
+pip_packages='virtualenvwrapper'
 npm_packages='diff-so-fancy'
 
 

@@ -8,7 +8,7 @@ pushd $HOME
 # Configurable parameters
 dotfiles_owner='bennettrogers'
 joint_packages='git vim bash-completion npm'
-osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace'
+osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace fzf'
 linux_packages='python-pip exuberant-ctags'
 pip_packages='virtualenvwrapper'
 npm_packages='diff-so-fancy'
@@ -78,6 +78,9 @@ if [[ ${INSTALL} == 'YES' ]]; then
         # Careful, this will overwrite anything else in .bashrc_local
         echo 'export PATH="$PATH:/usr/local/share/python"' > $HOME/.bashrc_local
         PIP=/usr/local/bin/pip
+
+        # Install fzf shell extensions
+        /usr/local/opt/fzf/install
     else
         $installtool $installtoolflags install $linux_packages
         PIP=pip

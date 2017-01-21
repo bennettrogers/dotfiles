@@ -2,7 +2,7 @@
 " compound-filetype file (e.g. filetype=html.javascript)
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_html_enabled_makers = ['tidy', 'eslint']
-let g:neomake_python_enabled_makers = ['pep8', 'pylint']
+let g:neomake_python_enabled_makers = ['pylint']
 
 let g:neomake_echo_current_error = 1
 let g:neomake_serialize = 0

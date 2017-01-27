@@ -43,13 +43,17 @@ Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf 
 Plug 'elzr/vim-json'                                                " json support
 Plug 'rodjek/vim-puppet'                                            " makes vim puppet-friendly
 Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
-" Plug 'Raimondi/delimitMate'                                         " auto-closing parens and quotes
 Plug 'junegunn/vim-easy-align'                                      " align text
-Plug 'tomtom/tcomment_vim'                                          "easy commenting with good support for compound filetypes
+Plug 'scrooloose/nerdcommenter'                                     "easy commenting with good support for compound filetypes
 Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file
-Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
+" Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
+Plug 'wavded/vim-stylus'                                            " stylus support
+Plug 'posva/vim-vue'
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)
 Plug 'tpope/vim-fugitive'                                           " git helpers
 Plug 'vim-scripts/CSSMinister'
+
+" Fun bits
+Plug 'ap/vim-css-color'                                             " Color previewer

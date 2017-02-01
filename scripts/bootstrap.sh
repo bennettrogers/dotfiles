@@ -8,8 +8,8 @@ pushd $HOME
 # Configurable parameters
 dotfiles_owner='bennettrogers'
 joint_packages='git vim bash-completion npm'
-osx_packages='python ctags coreutils CMake the_silver_searcher reattach-to-user-namespace fzf'
-linux_packages='python-pip exuberant-ctags'
+osx_packages='python coreutils CMake the_silver_searcher reattach-to-user-namespace fzf'
+linux_packages='python-pip'
 pip_packages='virtualenvwrapper'
 npm_packages='diff-so-fancy'
 

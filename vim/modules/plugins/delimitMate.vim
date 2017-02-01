@@ -6,4 +6,4 @@ let delimitMate_expand_cr = 1
 let delimitMate_jump_expansion = 0
 
 " Don't expand quotes
-let delimitMate_smart_quotes = 0
+" let delimitMate_smart_quotes = ''

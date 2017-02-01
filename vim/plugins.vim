@@ -3,7 +3,9 @@
 " So configuration for tmux.vim would go in modules/plugins/tmux.vim.vim
 
 " Basic config
+if !has('nvim')
 Plug 'tpope/vim-sensible'                                           " good starting point for vimrc
+endif
 
 " Behavioral improvements
 Plug 'haya14busa/incsearch.vim'                                     " highlight all incremental search matches
@@ -33,6 +35,7 @@ Plug 'nathanaelkane/vim-indent-guides'                              " displays i
 
 " Language and syntax support
 Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
 Plug 'othree/html5.vim'                                             " support html5 syntax
@@ -46,9 +49,10 @@ Plug 'reedes/vim-pencil'                                            " makes writ
 Plug 'junegunn/vim-easy-align'                                      " align text
 Plug 'scrooloose/nerdcommenter'                                     "easy commenting with good support for compound filetypes
 Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file
+Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
 " Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
 Plug 'wavded/vim-stylus'                                            " stylus support
-Plug 'posva/vim-vue'
+Plug 'posva/vim-vue'                                                " Vuejs file syntax support
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)

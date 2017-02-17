@@ -13,5 +13,7 @@ au BufWritePre *.html :%s/\(<\/li>\)\(\_s\+\)\(<li\)/\1<!--\2-->\3/e
 
 " Vue stuff
 
-" Setting filetype to html seems to offer the best syntax/indent support
-" autocmd BufNewFile,BufRead *.vue set filetype=html
+" Removing html from filetype declaration so that tidy stops complaining about
+" custom components/attributes. Remove this once
+" https://github.com/htacg/tidy-html5/issues/119 is closed
+autocmd BufNewFile,BufRead *.vue set filetype=vue.javascript.css

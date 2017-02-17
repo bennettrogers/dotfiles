@@ -6,4 +6,5 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
     curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-vim +"PlugSnapshot! $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa
+# TODO: conditionally use vim/nvim depending on which is installed
+nvim +"PlugSnapshot! $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa

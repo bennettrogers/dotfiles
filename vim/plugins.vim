@@ -21,7 +21,8 @@ Plug 'tpope/vim-repeat'                                             " allow for 
 " Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
 Plug 'tpope/vim-vinegar'                                            " project browser in split window
-Plug 'mhinz/vim-signify'                                            " gitgutter replacement
+Plug 'airblade/vim-gitgutter'                                       " git signs in the gutter
+" Plug 'mhinz/vim-signify'                                            " gitgutter replacement
 " Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
@@ -34,7 +35,8 @@ Plug 'mhartington/oceanic-next'                                     " oceanicnex
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
 
 " Language and syntax support
-Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
+" Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
+Plug 'w0rp/ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets

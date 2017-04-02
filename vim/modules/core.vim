@@ -131,6 +131,10 @@ set wildignore=*.o,*~,*.pyc
 " get rid of the silly characters in window separators
 set fillchars=""
 
+" Set the auto-line-commenting options the way I like (probably needs
+" tweaking)
+set formatoptions=jcroql
+
 " Toggle paste mode
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
@@ -174,12 +178,12 @@ set clipboard=unnamed
 
 " TODO: create a 'navigation' module
 " jump to the next error
-function! LocationNext()
-  try
-    lnext
-  catch
-    try | lfirst | catch | endtry
-  endtry
-endfunction
+" function! LocationNext()
+  " try
+    " lnext
+  " catch
+    " try | lfirst | catch | endtry
+  " endtry
+" endfunction
 
-nnoremap <leader>e :call LocationNext()<cr>
+" nnoremap <leader>e :call LocationNext()<cr>

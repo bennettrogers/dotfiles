@@ -37,7 +37,7 @@ Plug 'nathanaelkane/vim-indent-guides'                              " displays i
 " Language and syntax support
 " Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
 Plug 'w0rp/ale'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'                                              " web development multitool
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
 Plug 'othree/html5.vim'                                             " support html5 syntax

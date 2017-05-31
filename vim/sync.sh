@@ -7,4 +7,4 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
 fi
 
 # TODO: conditionally use vim/nvim depending on which is installed
-nvim +"PlugSnapshot! $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa
+vim +"PlugSnapshot! $HOME/.vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa

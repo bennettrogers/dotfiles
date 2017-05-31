@@ -13,7 +13,4 @@ au BufWritePre *.html :%s/\(<\/li>\)\(\_s\+\)\(<li\)/\1<!--\2-->\3/e
 
 " Vue stuff
 
-" Removing html from filetype declaration so that tidy stops complaining about
-" custom components/attributes. Remove this once
-" https://github.com/htacg/tidy-html5/issues/119 is closed
-autocmd BufNewFile,BufRead *.vue set filetype=vue.javascript.css
+autocmd BufNewFile,BufRead *.vue set filetype=vue.html.javascript.scss.css

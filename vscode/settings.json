@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite the default settings
+// TODO: sort and categorize this. add comments.
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "emmet.syntaxProfiles": {
+        "vue-html": "html"
+    },
+    "workbench.colorTheme": "Oceanic Next Italic",
+    "editor.fontSize": 18,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
+    "editor.cursorStyle": "line-thin",
+    "vim.useSolidBlockCursor": true,
+    "editor.cursorBlinking": "solid",
+    "editor.fontWeight": "100",
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.editor.showTabs": false,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before":["leader", "<cr>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "editor.minimap.renderCharacters": false,
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "none",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+    "files.trimTrailingWhitespace": true
+}

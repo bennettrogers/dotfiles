@@ -44,5 +44,10 @@
     "editor.fontLigatures": true,
     "editor.renderLineHighlight": "none",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ]
 }

@@ -19,3 +19,6 @@ aug QFClose
   au!
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
 aug END
+
+" Open netrw in tree mode by default
+let g:netrw_liststyle = 3

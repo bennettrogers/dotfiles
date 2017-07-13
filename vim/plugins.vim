@@ -30,9 +30,9 @@ Plug 'vim-airline/vim-airline'                                      " statusline
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
 
 " Styling
-Plug 'chriskempson/base16-vim'                                      " collection of colorschemes
-Plug 'mhartington/oceanic-next'                                     " oceanicnext colorscheme (currently only used for its airline theme)
+Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
+Plug 'amadeus/vim-evokai'                                           " full colorscheme (for comparison)
 
 " Language and syntax support
 " Plug 'neomake/neomake'                                              " automatic syntax checking (e.g. JSHint linting)
@@ -55,11 +55,14 @@ Plug 'Raimondi/delimitMate'                                         " smart hand
 " Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
 Plug 'wavded/vim-stylus'                                            " stylus support
 Plug 'posva/vim-vue'                                                " Vuejs file syntax support
+" Plug 'leafgarland/typescript-vim'                                   " Typescript support
+Plug 'mxw/vim-jsx'                                                  " JSX support
+Plug 'amadeus/vim-xml'
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)
 Plug 'tpope/vim-fugitive'                                           " git helpers
-Plug 'vim-scripts/CSSMinister'
+" Plug 'vim-scripts/CSSMinister'
 
 " Fun bits
 Plug 'ap/vim-css-color'                                             " Color previewer

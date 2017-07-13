@@ -1,7 +1,7 @@
 " Set up colors once colorscheme plugin has loaded
 syntax enable
 set background=dark
-colorscheme base16-oceanicnext
+colorscheme oceanicnext
 
 " Specify which terms to italicize
 highlight htmlArg gui=italic

@@ -11,27 +11,33 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDAltDelims_scss = 1
 
 " " Add your own custom formats or override the defaults
-" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = {
+    \ 'htmltag': {  'left': '<!-- ', 'right': '-->', 'leftAlt': '/*','rightAlt': '*/' },
+\}
 
 " Make it work on single-file Vue components
 let g:ft = ''
-fu! NERDCommenter_before()
+function! NERDCommenter_before()
   if &ft =~ 'vue'
     let g:ft = &ft
     let stack = synstack(line('.'), col('.'))
     if len(stack) > 0
       let syn = synIDattr((stack)[0], 'name')
+      :echom syn
       if len(syn) > 0
-        let syn = tolower(syn)
-        exe 'setf '.syn
+        " hack to get all html syntax types to work (e.g. HtmlEndTag)
+        if syn =~ '^html'
+          let syn = 'html'
+        endif
+        exe 'setf ' . tolower(syn)
       endif
     endif
   endif
-endfu
-fu! NERDCommenter_after()
+endfunction
+function! NERDCommenter_after()
   if g:ft =~ 'vue'
-    let &ft=g:ft
+    " setf g:ft
+	let &ft=g:ft
     let g:ft = ''
   endif
-endfu
-
+endfunction

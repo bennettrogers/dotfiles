@@ -7,10 +7,11 @@
 
 " Wrap whitespace between <li> elements in html comments.
 " This preserves layout while allowing for inline-block grids
-au BufWritePre *.html :%s/\(<\/li>\)\(\_s\+\)\(<li\)/\1<!--\2-->\3/e
+" NOTE: commenting this out as of 2017/06/05 until I know I need it again
+" au BufWritePre *.html :%s/\(<\/li>\)\(\_s\+\)\(<li\)/\1<!--\2-->\3/e
 
 "-----------------------------------------------"
 
 " Vue stuff
-
-autocmd BufNewFile,BufRead *.vue set filetype=vue.html.javascript.scss.css
+" NOTE: commeting this out as of 2017/06/05 to see if vim-vue handles it ok
+" autocmd BufNewFile,BufRead *.vue set filetype=vue.html.javascript.scss.css

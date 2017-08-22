@@ -10,7 +10,9 @@ let g:ale_warn_about_trailing_whitespace = 0
 
 " Choose which linters to run
 " TODO: Consider removing this once https://github.com/htacg/tidy-html5/issues/119 is closed
-let g:ale_linters = {'html': []}
+" TODO: Add back python support once configured properly to not be so
+" distracting
+let g:ale_linters = {'html': [], 'python': []}
 
 " TODO: detect e.g. .vue extension for setting syntax to scss
 let g:ale_css_stylelint_options = '--syntax scss'

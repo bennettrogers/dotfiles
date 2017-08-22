@@ -85,8 +85,8 @@ set guioptions=ac
 " Enable folding
 set foldenable
 
-" Use markers to indicate fold positions (defaults to {{{,}}})
-set foldmethod=marker
+" Use syntax
+set foldmethod=syntax
 
 " Don't fold on open
 set foldlevelstart=99
@@ -133,7 +133,7 @@ set fillchars=""
 
 " Set the auto-line-commenting options the way I like (probably needs
 " tweaking)
-set formatoptions=jcroql
+set formatoptions=jcql
 
 " Toggle paste mode
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>

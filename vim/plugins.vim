@@ -25,13 +25,16 @@ Plug 'airblade/vim-gitgutter'                                       " git signs 
 " Plug 'mhinz/vim-signify'                                            " gitgutter replacement
 " Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
+Plug 'jszakmeister/vim-togglecursor'                                " change cursor shape per mode
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
 
 " Styling
-Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+" Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+Plug '~/workspace/repos/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
+" Plug 'Yggdroot/indentLine'
 Plug 'amadeus/vim-evokai'                                           " full colorscheme (for comparison)
 
 " Language and syntax support
@@ -58,6 +61,7 @@ Plug 'posva/vim-vue'                                                " Vuejs file
 " Plug 'leafgarland/typescript-vim'                                   " Typescript support
 Plug 'mxw/vim-jsx'                                                  " JSX support
 Plug 'amadeus/vim-xml'
+" Plug 'python-mode/python-mode'
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)

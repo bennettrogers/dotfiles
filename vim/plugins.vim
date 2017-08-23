@@ -31,8 +31,8 @@ Plug 'vim-airline/vim-airline'                                      " statusline
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
 
 " Styling
-" Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
-Plug '~/workspace/repos/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+" Plug '~/workspace/repos/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
 Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
 " Plug 'Yggdroot/indentLine'
 Plug 'amadeus/vim-evokai'                                           " full colorscheme (for comparison)

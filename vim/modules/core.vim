@@ -131,9 +131,19 @@ set wildignore=*.o,*~,*.pyc
 " get rid of the silly characters in window separators
 set fillchars=""
 
-" Set the auto-line-commenting options the way I like (probably needs
-" tweaking)
-set formatoptions=jcql
+" Set the auto-line-commenting options the way I like
+" This has to be done with an autocommand since the default vim ftplugins override .vimrc
+" See the following for more information:
+" https://stackoverflow.com/questions/16030639/vim-formatoptions-or/23326474#23326474
+" http://peox.net/articles/vimconfig.html
+augroup Format-Options
+    autocmd!
+	" Set the options we want
+    " autocmd BufEnter * setlocal formatoptions=jcql
+
+	" Can also just remove settings we don't like, if desired
+	autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END
 
 " Toggle paste mode
 nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>

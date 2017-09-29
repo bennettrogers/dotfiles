@@ -54,7 +54,7 @@ Plug 'elzr/vim-json'                                                " json suppo
 Plug 'rodjek/vim-puppet'                                            " makes vim puppet-friendly
 Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
 Plug 'junegunn/vim-easy-align'                                      " align text
-Plug 'scrooloose/nerdcommenter'                                     "easy commenting with good support for compound filetypes
+Plug 'scrooloose/nerdcommenter'                                     " easy commenting with good support for compound filetypes
 Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file
 Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
 " Plug 'rizzatti/dash.vim'                                            " dash integration for OSX

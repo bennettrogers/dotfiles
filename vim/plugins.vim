@@ -17,6 +17,7 @@ Plug 'tpope/vim-surround'                                           " smart surr
 Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
 Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
 Plug 'tpope/vim-repeat'                                             " allow for repeating plugin commands
+Plug 'editorconfig/editorconfig-vim'                                " respect .editorconfig
 
 " Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
@@ -45,6 +46,7 @@ Plug 'mattn/emmet-vim'                                              " web develo
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
 Plug 'othree/html5.vim'                                             " support html5 syntax
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
+Plug 'prettier/vim-prettier'                                        " prettier support
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting

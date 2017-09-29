@@ -14,5 +14,11 @@ let g:ale_warn_about_trailing_whitespace = 0
 " distracting
 let g:ale_linters = {'html': [], 'python': []}
 
+let g:ale_fixers = {'javascript': ['eslint']}
+
+" Set this setting in vimrc if you want to fix files automatically on save.
+" This is off by default.
+let g:ale_fix_on_save = 1
+
 " TODO: detect e.g. .vue extension for setting syntax to scss
 let g:ale_css_stylelint_options = '--syntax scss'

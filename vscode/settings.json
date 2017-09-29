@@ -2,15 +2,11 @@
 // TODO: sort and categorize this. add comments.
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "emmet.syntaxProfiles": {
-        "vue-html": "html"
-    },
     "workbench.colorTheme": "Oceanic Next Italic",
     "editor.fontSize": 18,
     "editor.wordWrap": "on",
     "editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "line-thin",
-    "vim.useSolidBlockCursor": true,
     "editor.cursorBlinking": "solid",
     "editor.fontWeight": "100",
     "vim.leader": "<space>",
@@ -49,5 +45,20 @@
         "javascript",
         "javascriptreact",
         "vue"
-    ]
+    ],
+    "workbench.activityBar.visible": false,
+    "python.linting.enabled": false,
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "editor.autoIndent": true,
+    "emmet.useNewEmmet": false,"emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "jsx"
+    },
+    "editor.scrollBeyondLastLine": false,
+    "editor.mouseWheelScrollSensitivity": 0.2,
+    "editor.parameterHints": false
 }

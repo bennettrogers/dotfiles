@@ -63,6 +63,7 @@ Plug 'posva/vim-vue'                                                " Vuejs file
 " Plug 'leafgarland/typescript-vim'                                   " Typescript support
 Plug 'mxw/vim-jsx'                                                  " JSX support
 Plug 'amadeus/vim-xml'
+Plug 'jparise/vim-graphql'                                          " GraphQL support
 " Plug 'python-mode/python-mode'
 
 " External command helpers

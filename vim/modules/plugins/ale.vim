@@ -14,7 +14,7 @@ let g:ale_warn_about_trailing_whitespace = 0
 " distracting
 let g:ale_linters = {'html': [], 'python': []}
 
-let g:ale_fixers = { 'javascript': ['eslint', 'prettier'], 'json': ['prettier']}
+let g:ale_fixers = { 'javascript': ['eslint', 'prettier'], 'json': ['prettier'], 'css': ['prettier']}
 
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.

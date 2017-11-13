@@ -63,6 +63,9 @@ set undoreload=10000
 " Don't update the display while executing macros
 set lazyredraw
 
+set updatetime=250
+" Lower the interval before vim updates e.g. gitgutter (and writes to the swapfile)
+
 " Show the current mode
 set showmode
 

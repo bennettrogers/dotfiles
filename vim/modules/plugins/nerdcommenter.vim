@@ -36,7 +36,7 @@ function! NERDCommenter_before()
     endif
   endif
   " Make it work in JSX regions of .js files
-  " NOTE: this is a hack. it doesn't properly handle e.g. the first line of a JSX block, or (apparently) closing tags
+  " NOTE: this is a hack. it doesn't properly handle e.g. the first line of a JSX block
   if &ft =~ 'jsx'
     let g:ft = &ft
     let stack = synstack(line('.'), col('.'))

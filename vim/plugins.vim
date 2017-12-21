@@ -18,6 +18,7 @@ Plug 'tpope/vim-unimpaired'                                         " shortcuts 
 Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
 Plug 'tpope/vim-repeat'                                             " allow for repeating plugin commands
 Plug 'editorconfig/editorconfig-vim'                                " respect .editorconfig
+Plug 'wincent/terminus'                                             " Cursor, mouse, focus, and paste improvements
 
 " Window / UI
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
@@ -26,7 +27,6 @@ Plug 'airblade/vim-gitgutter'                                       " git signs 
 " Plug 'mhinz/vim-signify'                                            " gitgutter replacement
 " Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
-Plug 'jszakmeister/vim-togglecursor'                                " change cursor shape per mode
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
 Plug 'vim-airline/vim-airline'                                      " statusline customization utility
 Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
@@ -46,7 +46,6 @@ Plug 'mattn/emmet-vim'                                              " web develo
 Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets
 Plug 'othree/html5.vim'                                             " support html5 syntax
 Plug 'pangloss/vim-javascript'                                      " javascript friendliness
-Plug 'prettier/vim-prettier'                                        " prettier support
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting
@@ -60,7 +59,7 @@ Plug 'Raimondi/delimitMate'                                         " smart hand
 " Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
 Plug 'wavded/vim-stylus'                                            " stylus support
 Plug 'posva/vim-vue'                                                " Vuejs file syntax support
-" Plug 'leafgarland/typescript-vim'                                   " Typescript support
+Plug 'leafgarland/typescript-vim'                                   " Typescript support
 Plug 'mxw/vim-jsx'                                                  " JSX support
 Plug 'amadeus/vim-xml'
 Plug 'jparise/vim-graphql'                                          " GraphQL support
@@ -73,3 +72,4 @@ Plug 'tpope/vim-fugitive'                                           " git helper
 
 " Fun bits
 Plug 'ap/vim-css-color'                                             " Color previewer
+Plug 'tpope/vim-scriptease'                                         " Vim scripting help - (used mainly for the syntax highlighting help)

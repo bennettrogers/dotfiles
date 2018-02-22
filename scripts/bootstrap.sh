@@ -8,10 +8,10 @@ pushd $HOME
 # Configurable parameters
 dotfiles_owner='bennettrogers'
 joint_packages='git vim bash-completion npm'
-osx_packages='python coreutils CMake the_silver_searcher reattach-to-user-namespace fzf'
-linux_packages='python-pip'
-pip_packages='virtualenvwrapper'
-npm_packages='diff-so-fancy eslint prettier eslint-config-prettier eslint-plugin-prettier'
+osx_packages='coreutils CMake the_silver_searcher reattach-to-user-namespace fzf pyenv'
+linux_packages=''
+pip_packages=''
+npm_packages='diff-so-fancy eslint prettier'
 
 
 # get args

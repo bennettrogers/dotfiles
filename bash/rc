@@ -128,7 +128,8 @@ if $INTERACTIVE_SESSION; then
     export PATH="$HOME/bin:$PATH"
 
     # set the terminfo such that it also works via ssh
-    # tic ~/.homesick/repos/dotfiles/terminal/xterm-256color-italic
+    tic ~/.homesick/repos/dotfiles/terminal/xterm-256color.terminfo
+    tic ~/.homesick/repos/dotfiles/terminal/tmux-256color.terminfo
 
     # # autostart tmux
     # if [ "$PS1" != "" -a "${TMUX}" == "" -a "${SSH_TTY:-x}" != x ]; then

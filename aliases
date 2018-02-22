@@ -1,6 +1,6 @@
 # Use neovim when installed
 # NOTE: disabling this until I figure out why netrw is slow in neovim
-# type nvim &>/dev/null && alias vim=nvim
+type nvim &>/dev/null && alias vim=nvim
 
 # Color grep output
 alias grep='grep --color=auto'

@@ -3,7 +3,7 @@
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Chill a bit before getting up in my face
-let g:ale_lint_delay = 2000
+let g:ale_lint_delay = 200
 
 " This is already handled globally elsewhere
 let g:ale_warn_about_trailing_whitespace = 0
@@ -14,7 +14,7 @@ let g:ale_warn_about_trailing_whitespace = 0
 " distracting
 let g:ale_linters = {'html': [], 'python': []}
 
-let g:ale_fixers = { 'javascript': ['eslint', 'prettier'], 'json': ['prettier'], 'css': ['prettier']}
+let g:ale_fixers = { 'javascript': ['eslint', 'prettier'], 'json': ['prettier'], 'css': ['prettier'], 'python': ['yapf']}
 
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.

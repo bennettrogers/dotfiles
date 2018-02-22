@@ -63,7 +63,8 @@ Plug 'leafgarland/typescript-vim'                                   " Typescript
 Plug 'mxw/vim-jsx'                                                  " JSX support
 Plug 'amadeus/vim-xml'
 Plug 'jparise/vim-graphql'                                          " GraphQL support
-Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }                      " Support for emotion.sh (and other styled-components type libs)
+" Commenting out styled-components plugin since it breaks javascript.jsx indentation
+" Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }                      " Support for emotion.sh (and other styled-components type libs)
 " Plug 'python-mode/python-mode'
 
 " External command helpers

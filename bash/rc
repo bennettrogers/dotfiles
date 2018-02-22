@@ -125,7 +125,7 @@ if $INTERACTIVE_SESSION; then
     ##########################################################################
 
     # Prioritize local bins in path
-    export PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
     # set the terminfo such that it also works via ssh
     tic ~/.homesick/repos/dotfiles/terminal/xterm-256color.terminfo
@@ -149,6 +149,11 @@ if $INTERACTIVE_SESSION; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+    # initialize pyenv
+    if command -v pyenv 1>/dev/null 2>&1; then
+      eval "$(pyenv init -)"
+    fi
 
     # initizlize serverless
 

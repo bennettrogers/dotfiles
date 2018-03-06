@@ -94,13 +94,6 @@ stty -ixon
 
 if $INTERACTIVE_SESSION; then
 
-    # activate virtualenvwrapper (lazy means it won't be sourced until needed)
-    if [[ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]]; then
-        source /usr/local/bin/virtualenvwrapper_lazy.sh
-    elif [[ -f /usr/bin/virtualenvwrapper_lazy.sh ]]; then
-        source /usr/bin/virtualenvwrapper_lazy.sh
-    fi
-
     ##########################################################################
     # PROMPT
     GIT_PS1_SHOWDIRTYSTATE=true
@@ -142,6 +135,9 @@ if $INTERACTIVE_SESSION; then
     # added by Miniconda2 4.3.21 installer
     # export PATH="$HOME/.miniconda2/bin:$PATH"
 
+    # Add rust to path
+    export PATH="$HOME/.cargo/bin:$PATH"
+
     # initialize fzf
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -164,6 +160,12 @@ if $INTERACTIVE_SESSION; then
     # uninstall by removing these lines or running `tabtab uninstall sls`
     [ -f ~/n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . ~/n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
 
+    # The next line updates PATH for the Google Cloud SDK.
+    if [ -f '/Users/bennett/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/bennett/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+    # The next line enables shell command completion for gcloud.
+    if [ -f '/Users/bennett/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/bennett/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
 
 fi
 
@@ -172,9 +174,3 @@ fi
 # Clean up
 unset rcfiles
 unset system
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bennett/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/bennett/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bennett/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/bennett/Downloads/google-cloud-sdk/completion.bash.inc'; fi

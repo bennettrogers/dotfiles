@@ -27,8 +27,14 @@ alias -- -="cd -"
 # Unicode gpg
 alias gpg='gpg2 --display-charset utf-8'
 
-# Use smartcase by default for ripgrep
-alias rg="rg --smart-case"
+# Customize ripgrep usage
+rg() {
+    if [ -t 1 ]; then
+        command rg -p --hidden --smart-case "$@" | less -RFX
+    else
+        command rg --hidden --smart-case "$@"
+    fi
+}
 
 # Use OS X specific config file for Tmux
 if command -v reattach-to-user-namespace &>/dev/null; then

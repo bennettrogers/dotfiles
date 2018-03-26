@@ -79,7 +79,7 @@
     newHighlight = "green bold 22"
 [core]
     editor = vim
-    pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -r
 	excludesFile = ~/.global_ignore
 [branch]
     autosetuprebase = always

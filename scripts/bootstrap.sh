@@ -11,7 +11,7 @@ joint_packages='git vim bash-completion npm'
 osx_packages='coreutils CMake the_silver_searcher reattach-to-user-namespace fzf pyenv'
 linux_packages=''
 pip_packages=''
-npm_packages='diff-so-fancy eslint prettier'
+npm_packages='eslint prettier'
 
 
 # get args

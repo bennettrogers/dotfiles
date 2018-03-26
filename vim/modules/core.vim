@@ -22,6 +22,7 @@ set binary
 " Default indentation and tab handling
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " More natural splitting.
@@ -63,14 +64,17 @@ set undoreload=10000
 " Don't update the display while executing macros
 set lazyredraw
 
-set updatetime=250
 " Lower the interval before vim updates e.g. gitgutter (and writes to the swapfile)
+set updatetime=250
 
 " Show the current mode
 set showmode
 
 " Hide the mouse pointer while typing
 set mousehide
+
+" Enable GUI mouse behavior
+set mouse=a
 
 " Set up the gui cursor to look nice
 set guicursor=n-v-c:block-Cursor-blinkon0
@@ -134,6 +138,9 @@ set wildignore=*.o,*~,*.pyc
 " get rid of the silly characters in window separators
 set fillchars=""
 
+set list
+set listchars=trail:·
+
 " Set the auto-line-commenting options the way I like
 " This has to be done with an autocommand since the default vim ftplugins override .vimrc
 " See the following for more information:
@@ -158,9 +165,6 @@ nmap <silent> <leader>sp :set invspell spelllang=en_us<CR>:set spell?<CR>
 nmap <silent> <leader>cd :lcd %:h<CR>
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
-" Underline the current line with '='
-nmap <silent> <leader>ul :t.\|s/./=/g\|set nohls<cr>
-
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
@@ -183,7 +187,6 @@ nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
 
 " avoid using ctrl-c for esc (use <C-[> kj instead)
-" inoremap kj <Esc>
 inoremap <C-c> <nop>
 
 " yank to the system clipboard

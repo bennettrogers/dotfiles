@@ -139,7 +139,7 @@ set wildignore=*.o,*~,*.pyc
 set fillchars=""
 
 set list
-set listchars=trail:·
+set listchars=trail:·,tab:··
 
 " Set the auto-line-commenting options the way I like
 " This has to be done with an autocommand since the default vim ftplugins override .vimrc
@@ -148,11 +148,11 @@ set listchars=trail:·
 " http://peox.net/articles/vimconfig.html
 augroup Format-Options
     autocmd!
-	" Set the options we want
+    " Set the options we want
     " autocmd BufEnter * setlocal formatoptions=jcql
 
-	" Can also just remove settings we don't like, if desired
-	autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    " Can also just remove settings we don't like, if desired
+    autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
 " Toggle paste mode

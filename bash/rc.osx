@@ -22,7 +22,7 @@ if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
     else
         eval `dircolors -b`
     fi
-	alias ls='/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto'
+    alias ls='/usr/local/opt/coreutils/libexec/gnubin/ls --color=auto'
 else
     alias ls='ls -hG'
 fi

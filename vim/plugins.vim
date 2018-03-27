@@ -21,7 +21,7 @@ Plug 'tpope/vim-repeat'                                             " allow for 
 Plug 'wincent/terminus'                                             " Cursor, mouse, focus, and paste improvements
 
 " Window / UI
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " fuzzy file finder/opener
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }   " fuzzy file finder/opener
 Plug 'tpope/vim-vinegar'                                            " project browser in split window
 Plug 'airblade/vim-gitgutter'                                       " git signs in the gutter
 " Plug 'mhinz/vim-signify'                                            " gitgutter replacement

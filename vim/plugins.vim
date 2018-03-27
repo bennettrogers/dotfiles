@@ -17,7 +17,7 @@ Plug 'tpope/vim-surround'                                           " smart surr
 Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
 Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
 Plug 'tpope/vim-repeat'                                             " allow for repeating plugin commands
-Plug 'editorconfig/editorconfig-vim'                                " respect .editorconfig
+" Plug 'editorconfig/editorconfig-vim'                                " NOTE: this plugin causes performance issues in neovim. Disable for now.
 Plug 'wincent/terminus'                                             " Cursor, mouse, focus, and paste improvements
 
 " Window / UI

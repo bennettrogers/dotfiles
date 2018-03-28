@@ -6,7 +6,17 @@ function! Dot(path)
   return '~/.vim/' . a:path
 endfunction
 
-" Load all configuration modules.
-for file in split(glob(Dot('modules/*.vim')), '\n')
+" Load default configuration modules.
+for file in glob(Dot('modules/default/*.vim'), 0, 1)
   execute 'source' file
 endfor
+
+" Load Oni configuration modules
+if exists("g:gui_oni")
+  for file in glob(Dot('modules/oni/*.vim'), 0, 1)
+    execute 'source' file
+  endfor
+endif
+
+" if has('nvim')
+" endif

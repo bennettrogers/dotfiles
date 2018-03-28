@@ -12,6 +12,6 @@ execute 'source' Dot('plugins.vim')
 call plug#end()
 
 " Load all plugin configuration files.
-for file in split(glob(Dot('modules/plugins/*.vim')), '\n')
+for file in glob(Dot('modules/plugins/*.vim'), 0, 1)
   exec 'source' file
 endfor

@@ -1,6 +1,6 @@
 " Die early if this Vim install is built with tiny or small.
 " We don't want a Raspberry Pi, for example, running all of these.
-if !1 | finish | endif
+" if !1 | finish | endif
 
 " Initialise vim-plug
 call plug#begin()
@@ -12,6 +12,6 @@ execute 'source' Dot('plugins.vim')
 call plug#end()
 
 " Load all plugin configuration files.
-for file in split(glob(Dot('modules/plugins/*.vim')), '\n')
+for file in glob(Dot('modules/plugins/*.vim'), 0, 1)
   exec 'source' file
 endfor

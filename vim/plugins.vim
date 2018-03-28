@@ -3,8 +3,8 @@
 " So configuration for tmux.vim would go in modules/plugins/tmux.vim.vim
 
 " Basic config
-if !has('nvim')
-Plug 'tpope/vim-sensible'                                           " good starting point for vimrc
+if g:terminal_env
+  Plug 'tpope/vim-sensible'                                           " good starting point for vimrc
 endif
 
 " Behavioral improvements
@@ -28,8 +28,11 @@ Plug 'airblade/vim-gitgutter'                                       " git signs 
 " Plug 'junegunn/goyo.vim'                                            " distraction-free writing
 Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
 Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
-Plug 'vim-airline/vim-airline'                                      " statusline customization utility
-Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
+
+if g:terminal_env
+  Plug 'vim-airline/vim-airline'                                      " statusline customization utility
+  Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
+endif
 
 " Styling
 Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)

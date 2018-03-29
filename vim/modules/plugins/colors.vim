@@ -1,18 +1,20 @@
-" Set up colors once colorscheme plugin has loaded
-syntax enable
-set background=dark
-colorscheme OceanicNext
+if g:terminal_env
+    " Set up colors once colorscheme plugin has loaded
+    syntax enable
+    set background=dark
+    colorscheme OceanicNext
 
-" Specify which terms to italicize
-highlight htmlArg gui=italic
-highlight htmlArg cterm=italic
-highlight Comment gui=italic
-highlight Comment cterm=italic
-highlight Todo    gui=italic
-highlight Todo    cterm=italic
+    " Specify which terms to italicize
+    highlight htmlArg gui=italic
+    highlight htmlArg cterm=italic
+    highlight Comment gui=italic
+    highlight Comment cterm=italic
+    highlight Todo    gui=italic
+    highlight Todo    cterm=italic
 
-" Set Airline theme
-let g:airline_theme='oceanicnext'
+    " Set Airline theme
+    let g:airline_theme='oceanicnext'
+endif
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size

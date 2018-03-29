@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set the brew prefix for use in other commands, since it's slow to eval
-BREW_PREFIX='/usr/local'
-
 # Set the custom prompt
 export CLICOLOR=1
 export LSCOLORS="gxfxcxdxbxegedabagacad"
@@ -27,8 +24,7 @@ else
     alias ls='ls -hG'
 fi
 
-# Add git abilities to prompt
-source $BREW_PREFIX/etc/bash_completion.d/git-prompt.sh
-
 # Add bash completion
-source $BREW_PREFIX/etc/bash_completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+    . /usr/local/share/bash-completion/bash_completion
+fi

@@ -10,9 +10,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='/bin/ls --color=auto'
 fi
 
-# Source git completion settings
-source $HOME/.local/bin/git-prompt.sh
-source $HOME/.local/bin/git-completion.bash
+# Source bash completion settings
+[ -f /etc/bash_completion ] && . /etc/bash_completion
 
 # Add rbenv to path (TODO: prob need to make this conditional on rbenv existing...)
 # export PATH="$HOME/.rbenv/bin:$PATH"

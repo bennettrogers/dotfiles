@@ -22,9 +22,6 @@ source $rcfiles/bash/styling
 # Source aliases settings
 source $rcfiles/aliases
 
-# Source bash completion settings
-source $rcfiles/bash/completion
-
 # Source platform-specific bashrc files
 if [ "$system" == 'Linux' ]; then
     source $rcfiles/bash/rc.linux

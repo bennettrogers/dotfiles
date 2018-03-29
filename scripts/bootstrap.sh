@@ -7,7 +7,7 @@ pushd $HOME
 
 # Configurable parameters
 dotfiles_owner='bennettrogers'
-joint_packages='git vim bash-completion npm'
+joint_packages='git vim bash-completion@2 npm'
 osx_packages='coreutils CMake the_silver_searcher reattach-to-user-namespace fzf pyenv'
 linux_packages=''
 pip_packages=''

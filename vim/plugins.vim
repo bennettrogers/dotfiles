@@ -8,23 +8,18 @@ if g:terminal_env
 endif
 
 " Behavioral improvements
-Plug 'sjl/gundo.vim'                                                " graphical undo tree
 Plug 'tpope/vim-surround'                                           " smart surrounding (parens, quotes, etc)
-Plug 'tpope/vim-unimpaired'                                         " shortcuts for common paired actions (e.g. next/prev error)
-Plug 'AndrewRadev/splitjoin.vim'                                    " quickly split/join lines into multiple/one
-Plug 'tpope/vim-repeat'                                             " allow for repeating plugin commands
 " Plug 'editorconfig/editorconfig-vim'                                " NOTE: this plugin causes performance issues in neovim. Disable for now.
 if g:terminal_env
     Plug 'haya14busa/vim-asterisk'                                      " better * operation handling
-    Plug 'haya14busa/incsearch.vim'                                     " highlight all incremental search matches
     Plug 'mileszs/ack.vim'                                              " search tool
     Plug 'wincent/terminus'                                             " Cursor, mouse, focus, and paste improvements
 endif
 
 " Window / UI
+Plug 'tpope/vim-vinegar'                                            " project browser in split window
 if g:terminal_env
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }   " fuzzy file finder/opener
-    Plug 'tpope/vim-vinegar'                                            " project browser in split window
     Plug 'airblade/vim-gitgutter'                                       " git signs in the gutter
     Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
     Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
@@ -35,11 +30,10 @@ endif
 " Styling
 if g:terminal_env
     Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
-    Plug 'nathanaelkane/vim-indent-guides'                              " displays indent levels
-    Plug 'amadeus/vim-evokai'                                           " full colorscheme (for comparison)
 endif
 
 " Language and syntax support
+Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
 if g:terminal_env
     Plug 'w0rp/ale'
     " Plug 'ludovicchabant/vim-gutentags'
@@ -52,12 +46,9 @@ if g:terminal_env
     Plug 'Keithbsmiley/tmux.vim'                                        " tmux conf syntax highlighting
     Plug 'elzr/vim-json'                                                " json support
     Plug 'rodjek/vim-puppet'                                            " makes vim puppet-friendly
-    Plug 'reedes/vim-pencil'                                            " makes writing text (e.g. markdown) in vim easier
     Plug 'junegunn/vim-easy-align'                                      " align text
     Plug 'scrooloose/nerdcommenter'                                     " easy commenting with good support for compound filetypes
     Plug 'majutsushi/tagbar'                                            " shows the current symbols from this file
-    Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
-    " Plug 'rizzatti/dash.vim'                                            " dash integration for OSX
     Plug 'wavded/vim-stylus'                                            " stylus support
     Plug 'posva/vim-vue'                                                " Vuejs file syntax support
     Plug 'leafgarland/typescript-vim'                                   " Typescript support
@@ -71,7 +62,6 @@ endif
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)
-Plug 'tpope/vim-fugitive'                                           " git helpers
 
 " Fun bits
 Plug 'ap/vim-css-color'                                             " Color previewer

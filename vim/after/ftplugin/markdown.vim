@@ -9,4 +9,4 @@
 " Goyo
 
 " Initialize vim-pencil
-call pencil#init({'wrap': 'soft'})
+" call pencil#init({'wrap': 'soft'})

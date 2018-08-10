@@ -23,7 +23,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -10050,9 +10050,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 469 0 0 3440 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>924 490 796 473 0 0 3440 1418 </string>
+	<string>924 473 796 486 0 0 3440 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 24 1720 1394 0 0 3440 1418 </string>
+	<string>1720 0 1720 1418 0 0 3440 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -12414,11 +12414,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=5</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=5</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-29T23:30:34Z</date>
+	<date>2018-07-23T12:21:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -12476,6 +12476,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6beta5</string>
+	<string>3.2.0beta6</string>
 </dict>
 </plist>

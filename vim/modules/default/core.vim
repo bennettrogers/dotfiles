@@ -190,7 +190,7 @@ nmap <leader>q :q<CR>
 inoremap <C-c> <nop>
 
 " yank to the system clipboard
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " TODO: create a 'navigation' module
 " jump to the next error

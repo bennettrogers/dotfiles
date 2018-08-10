@@ -56,7 +56,7 @@ if g:terminal_env
     Plug 'amadeus/vim-xml'
     Plug 'jparise/vim-graphql'                                          " GraphQL support
     " Commenting out styled-components plugin since it breaks javascript.jsx indentation
-    " Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }                      " Support for emotion.sh (and other styled-components type libs)
+    Plug 'styled-components/vim-styled-components'                      " Support for emotion.sh (and other styled-components type libs)
     " Plug 'python-mode/python-mode'
 endif
 

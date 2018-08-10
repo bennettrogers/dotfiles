@@ -13,6 +13,9 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Brew packages need to be in path before system packages
 export PATH="/usr/local/bin:$PATH"
 
+# Add fastlane to path
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
     if [ -f ~/.dir_colors ]; then
         eval `dircolors ~/.dir_colors`

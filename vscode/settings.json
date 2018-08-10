@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
-// TODO: sort and categorize this. add comments.
+// TODO: sort and categorize this. add comments as to why it was changed
+// NOTE: can get info about a setting by hovering
 {
-    "vim.disableAnnoyingNeovimMessage": true,
     "workbench.colorTheme": "Oceanic Next Italic",
     "editor.fontSize": 18,
     "editor.wordWrap": "on",
@@ -9,56 +9,38 @@
     "editor.cursorStyle": "line-thin",
     "editor.cursorBlinking": "solid",
     "editor.fontWeight": "100",
-    "vim.leader": "<space>",
-    "vim.easymotion": true,
-    "vim.hlsearch": true,
     "workbench.iconTheme": "vscode-great-icons",
-    "workbench.editor.showTabs": false,
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before":["leader", "<cr>"],
-            "after":[],
-            "commands": [
-                {
-                    "command": ":nohl",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "w"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        }
-    ],
+    // "workbench.editor.showTabs": false,
     "editor.minimap.renderCharacters": false,
     "editor.fontLigatures": true,
-    "editor.renderLineHighlight": "none",
+    "editor.renderLineHighlight": "gutter",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "files.trimTrailingWhitespace": true,
     "eslint.validate": [
         "javascript",
-        "javascriptreact",
-        "vue"
+        "javascriptreact"
     ],
     "workbench.activityBar.visible": false,
-    "python.linting.enabled": false,
     "files.associations": {
         "*.js": "javascriptreact"
     },
     "editor.tabSize": 2,
     "window.zoomLevel": 0,
     "editor.autoIndent": true,
-    "emmet.useNewEmmet": false,"emmet.includeLanguages": {
-        "vue-html": "html",
-        "javascript": "jsx"
-    },
     "editor.scrollBeyondLastLine": false,
     "editor.mouseWheelScrollSensitivity": 0.2,
-    "editor.parameterHints": false
+    "editor.parameterHints": false,
+    // Off since I'm using the MS Python Server
+    "python.jediEnabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    // Use iTerm as the external terminal
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    // Changing so that typing e.g. "import plot from matplotlib as plt<Enter>" doesn't autocomplete to something else when I want a newline
+    "editor.acceptSuggestionOnEnter": "off",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.formatting.blackPath": "/Users/bennett/.pyenv/shims/black",
+    "python.linting.enabled": false
 }

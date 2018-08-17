@@ -1,7 +1,7 @@
 -- stuff to always load/set first
 
 -- Uncomment to set non-default log level
-hs.logger.defaultLogLevel = 'debug'
+-- hs.logger.defaultLogLevel = 'debug'
 logger = hs.logger.new('main')
 
 

@@ -1,3 +1,5 @@
+local alert = require "hs.alert"
+
 -- track the last focused window of every application in a table
 -- make a method that takes an application name and focuses the last focused window for that application
 

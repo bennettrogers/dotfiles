@@ -1,3 +1,9 @@
+local grid = require "hs.grid"
+local window = require "hs.window"
+local alert = require "hs.alert"
+local appfinder = require "hs.appfinder"
+local screen = require "hs.screen"
+
 -- Moves a window to a predefined position.
 function gridset(frame)
   return function()

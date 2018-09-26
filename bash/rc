@@ -149,6 +149,11 @@ if $INTERACTIVE_SESSION; then
       eval "$(pyenv init -)"
     fi
 
+    # initialize pyenv-virtualenv
+    if which pyenv-virtualenv-init > /dev/null; then
+      eval "$(pyenv virtualenv-init -)";
+    fi
+
     # initizlize serverless
 
     # tabtab source for serverless package

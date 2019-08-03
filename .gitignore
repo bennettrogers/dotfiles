@@ -1,7 +1,8 @@
 *.DS_Store
 local/share
 local/venvs
-local/bin/pipsi
+local/bin/black
+local/bin/blackd
 vim/autoload
 vim/sessions
 *.log

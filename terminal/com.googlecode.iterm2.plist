@@ -9,7 +9,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -10044,15 +10044,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>213 621 778 77 0 0 3440 1418 </string>
+	<string>213 353 778 77 0 0 3440 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1370 597 700 622 0 0 3440 1418 </string>
+	<string>1370 596 700 622 0 0 3440 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 469 0 0 3440 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>924 473 796 486 0 0 3440 1418 </string>
+	<string>708 635 796 486 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1720 0 1720 1418 0 0 3440 1418 </string>
+	<string>0 0 1720 1417 0 0 3440 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -12334,10 +12334,14 @@
 			<string>/Users/brogers</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>22C493C1-6669-40E1-93E1-EBDCCD5F6F3E</string>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncSuppressBroadcastInputWarning</key>
@@ -12418,7 +12422,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-23T12:21:16Z</date>
+	<date>2019-03-24T05:24:06Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -12435,6 +12439,8 @@
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.39166666666666672</real>
+	<key>StretchTabsToFillBar</key>
+	<false/>
 	<key>SuppressMultilinePasteWarningWhenNotAtShellPrompt</key>
 	<false/>
 	<key>SwitchTabModifier</key>
@@ -12442,6 +12448,8 @@
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
 	<key>TabStyle</key>
+	<integer>1</integer>
+	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
@@ -12476,6 +12484,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.0beta6</string>
+	<string>3.2.7</string>
 </dict>
 </plist>

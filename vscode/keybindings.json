@@ -79,5 +79,13 @@
   {
     "key": "cmd+k cmd+right",
     "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "cmd+k w",
+    "command": "-workbench.action.closeEditorsInGroup"
   }
 ]

@@ -10,7 +10,6 @@ alias egrep='egrep --color=auto'
 alias l='ls -CF'
 alias ll='ls -al'
 alias la='ls -A'
-alias lt='ls -lt'
 alias t='tree'
 
 # git typos

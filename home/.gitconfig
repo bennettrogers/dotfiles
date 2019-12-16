@@ -99,3 +99,7 @@
     pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
+[rerere]
+	enabled = true
+[merge]
+	conflictstyle = diff3

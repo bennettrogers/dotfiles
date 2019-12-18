@@ -15,6 +15,9 @@ let mapleader=" "
 "     au FocusGained * :set rnu
 " endif
 
+" Set the encoding
+set encoding=UTF-8
+
 " Write files as they are, don't mess with line endings etc.
 " NOTE: this has to come before set expandtab or it will disable it
 set binary

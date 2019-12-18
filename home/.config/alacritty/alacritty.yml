@@ -33,12 +33,12 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 2
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -107,7 +107,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Operator Mono for Powerline
+    family: OperatorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Light
@@ -118,10 +118,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Operator Mono for Powerline
+    family: OperatorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Book
 
   # Italic font face
   italic:
@@ -129,10 +129,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Operator Mono for Powerline
+    family: OperatorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Light Italic
 
   # Bold italic font face
   bold_italic:
@@ -140,10 +140,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Operator Mono for Powerline
+    family: OperatorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    style: Book Italic
 
   # Point size
   size: 18.0
@@ -153,14 +153,12 @@ font:
   #offset:
   #  x: 0
   #  y: 0
-
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
   #glyph_offset:
   #  x: 0
   #  y: 0
-
   # Thin stroke font rendering (macOS only)
   #
   # Thin strokes are suitable for retina displays, but for non-retina screens
@@ -178,7 +176,7 @@ font:
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 schemes:
   oceanic_next: &oceanicnext # Default colors

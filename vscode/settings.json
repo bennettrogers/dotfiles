@@ -2,14 +2,12 @@
 // TODO: sort and categorize this. add comments as to why it was changed
 // NOTE: can get info about a setting by hovering
 {
-  "workbench.colorTheme": "Oceanic Next Italic",
   "editor.fontSize": 18,
   "editor.wordWrap": "on",
-  "editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "OperatorMono Nerd Font",
   "editor.cursorStyle": "line-thin",
   "editor.cursorBlinking": "solid",
   "editor.fontWeight": "100",
-  "workbench.iconTheme": "vscode-great-icons",
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "gutter",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
@@ -76,5 +74,63 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Oceanic Next Italic",
+  "workbench.iconTheme": "vscode-great-icons",
+  // Vim
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.overrideCopy": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Save with leader-w
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    // Close editor with leader-q
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    // Turn off highlights with leader-enter
+    {
+      "before": [
+        "<leader>",
+        "<CR>"
+      ],
+      "commands": [
+        ":nohl",
+      ]
+    },
+    // Indent and outdent with >, <
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+  ]
 }

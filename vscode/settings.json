@@ -12,27 +12,22 @@
   "editor.renderLineHighlight": "gutter",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "workbench.activityBar.visible": false,
   "files.associations": {
     // "*.js": "javascriptreact",
     "**/templates/*.html": "django-html",
-    "**/templates/*": "django-txt",
+    "**/templates/*": "django-txt"
     // "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
   "editor.tabSize": 2,
   "window.zoomLevel": 0,
-  "editor.autoIndent": true,
+  "editor.autoIndent": "full",
   "editor.scrollBeyondLastLine": false,
   // Off since I'm using the MS Python Server
   "python.jediEnabled": false,
   // Disable use-before-def errors until issue is fixed: https://github.com/Microsoft/python-language-server/issues/386
-  "python.analysis.disabled": [
-    "use-before-def"
-  ],
+  "python.analysis.disabled": ["use-before-def"],
   "workbench.startupEditor": "newUntitledFile",
   // Use iTerm as the external terminal
   "terminal.external.osxExec": "iTerm.app",
@@ -42,10 +37,15 @@
   "editor.acceptSuggestionOnEnter": "off",
   "python.formatting.provider": "black",
   // Add extraPaths so the python language server knows where to look for our modules
-  "python.autoComplete.extraPaths": [
-    "./server"
-  ],
+  "python.autoComplete.extraPaths": ["./server"],
   "editor.formatOnSave": true,
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "json.format.enable": false,
+  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
   // "[html]": {
   //   "editor.formatOnSave": true,
   //   // "editor.defaultFormatter": "HookyQR.beautify",
@@ -54,7 +54,8 @@
   "python.linting.enabled": false,
   "explorer.confirmDelete": false,
   "emmet.includeLanguages": {
-    "django-html": "html"
+    "django-html": "html",
+    "javascript": "javascriptreact"
   },
   "emmet.triggerExpansionOnTab": true,
   "editor.minimap.renderCharacters": false,
@@ -71,12 +72,18 @@
   "editor.formatOnSaveTimeout": 2000,
   "[python]": {},
   "html.format.enable": false,
+  // turn it off for JS and JSX, we will do this via eslint
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.formatOnSave": true
   },
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Oceanic Next Italic",
-  "workbench.iconTheme": "vscode-great-icons",
   // Vim
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
@@ -87,50 +94,53 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     // Save with leader-w
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "commands": [
-        "workbench.action.files.save"
-      ]
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
     },
     // Close editor with leader-q
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "commands": [
-        "workbench.action.closeActiveEditor"
-      ]
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     // Turn off highlights with leader-enter
     {
-      "before": [
-        "<leader>",
-        "<CR>"
-      ],
-      "commands": [
-        ":nohl",
-      ]
+      "before": ["<leader>", "<CR>"],
+      "commands": [":nohl"]
     },
     // Indent and outdent with >, <
     {
-      "before": [
-        ">"
-      ],
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    // Fix undo/redo
+    {
+      "before": ["u"],
+      "after": [],
       "commands": [
-        "editor.action.indentLines"
+        {
+          "command": "undo"
+        }
       ]
     },
     {
-      "before": [
-        "<"
-      ],
+      "before": ["<C-r>"],
+      "after": [],
       "commands": [
-        "editor.action.outdentLines"
+        {
+          "command": "redo"
+        }
       ]
-    },
-  ]
+    }
+  ],
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "javascript.suggest.autoImports": false,
+  // "[html]": {
+  //   "editor.defaultFormatter": "HookyQR.beautify"
+  // },
+  "html.format.indentHandlebars": true,
+  "workbench.fontAliasing": "auto"
 }

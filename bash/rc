@@ -17,10 +17,15 @@ if [ -f ~/.bash_local ]; then
 fi
 
 # Source color aliases
-source $rcfiles/bash/styling
+source $rcfiles/bash/source/styling
 
 # Source aliases settings
 source $rcfiles/aliases
+
+# Source git-completion and git-prompt
+# TODO: should all sourcing happen in the interactive-only section?
+source $rcfiles/bash/source/git-prompt.sh
+source $rcfiles/bash/source/git-completion.bash
 
 # Source platform-specific bashrc files
 if [ "$system" == 'Linux' ]; then
@@ -94,6 +99,8 @@ if $INTERACTIVE_SESSION; then
     ##########################################################################
     # PROMPT
     GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWCOLORHINTS=true
+    GIT_PS1_SHOWSTASHSTATE=true
 
     # Username@host
     PS1="${txtitl}${txtcyn}\u${txtblu}@${txtgrn}\h${txtdef}"

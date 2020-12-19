@@ -7,7 +7,6 @@
   "editor.fontFamily": "OperatorMono Nerd Font",
   "editor.cursorStyle": "line-thin",
   "editor.cursorBlinking": "solid",
-  "editor.fontWeight": "100",
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "gutter",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
@@ -38,7 +37,10 @@
   "python.formatting.provider": "black",
   // Add extraPaths so the python language server knows where to look for our modules
   "python.autoComplete.extraPaths": ["./server"],
-  "editor.formatOnSave": true,
+
+  // This is deprecated in favor of editor.codeActionsOnSave?
+  // "editor.formatOnSave": true,
+
   // tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
     "source.fixAll": true
@@ -50,7 +52,7 @@
   //   "editor.formatOnSave": true,
   //   // "editor.defaultFormatter": "HookyQR.beautify",
   // },
-  "python.formatting.blackPath": "/Users/bennett/.pyenv/versions/3.7.2/bin/black",
+  "python.formatting.blackPath": "/Users/bennett/.pyenv/versions/3.8.6/bin/black",
   "python.linting.enabled": false,
   "explorer.confirmDelete": false,
   "emmet.includeLanguages": {
@@ -60,7 +62,7 @@
   "emmet.triggerExpansionOnTab": true,
   "editor.minimap.renderCharacters": false,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": false,
   "workbench.editor.closeOnFileDelete": true,
   "editor.parameterHints.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
@@ -72,9 +74,13 @@
   "editor.formatOnSaveTimeout": 2000,
   "[python]": {},
   "html.format.enable": false,
+  "[django-html]": {
+    "editor.formatOnSave": false
+  },
   // turn it off for JS and JSX, we will do this via eslint
   "[javascript]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.formatOnSave": false
@@ -142,5 +148,17 @@
   //   "editor.defaultFormatter": "HookyQR.beautify"
   // },
   "html.format.indentHandlebars": true,
-  "workbench.fontAliasing": "auto"
+  "workbench.fontAliasing": "auto",
+  "python.languageServer": "Pylance",
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/*.pyc": { "when": "$(basename).py" },
+    "**/__pycache__": true
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "python.analysis.extraPaths": ["./server"],
+  "editor.formatOnSave": true
 }

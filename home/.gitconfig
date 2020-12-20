@@ -72,19 +72,17 @@
     old = red bold
     new = green bold
     whitespace = red reverse
-[color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = "red bold 52"
-    newNormal = "green bold"
-    newHighlight = "green bold 22"
 [core]
     editor = vim
-    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -r
+    pager = delta
     excludesFile = ~/.global_ignore
 [branch]
     autosetuprebase = always
 [credential]
     helper = cache --timeout=86400
+
+[interactive]
+    diffFilter = delta --color-only
 
 # URL shorthands (e.g., git clone gh:crocodoc/dotfiles)
 [url "git@github.com:"]
@@ -100,6 +98,12 @@
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
 [rerere]
-	enabled = true
+    enabled = true
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+    line-numbers = true
+    side-by-side = true

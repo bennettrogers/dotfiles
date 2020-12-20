@@ -13,6 +13,10 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Brew packages need to be in path before system packages
 export PATH="/usr/local/bin:$PATH"
 
+# MacPorts packages need to be in path before system packages
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export MANPATH="/opt/local/share/man:$MANPATH"
+
 if [ -x /usr/local/opt/coreutils/libexec/gnubin/dircolors ]; then
     if [ -f ~/.dir_colors ]; then
         eval `dircolors ~/.dir_colors`

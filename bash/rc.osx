@@ -10,8 +10,11 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Add GNU coreutils to default man path
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# Brew packages need to be in path before system packages
+# Local packages need to be in path before system packages
 export PATH="/usr/local/bin:$PATH"
+
+# Homebrew packages need to be in path before system packages
+export PATH="/opt/homebrew/bin:$PATH"
 
 # MacPorts packages need to be in path before system packages
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"

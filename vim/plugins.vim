@@ -35,7 +35,7 @@ endif
 " Language and syntax support
 Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
 if g:terminal_env
-    Plug 'w0rp/ale'
+    Plug 'dense-analysis/ale'
     " Plug 'ludovicchabant/vim-gutentags'
     Plug 'mattn/emmet-vim'                                              " web development multitool
     Plug 'mattn/webapi-vim'                                             " api for emmet that enables custom snippets

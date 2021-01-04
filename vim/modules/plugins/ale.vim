@@ -12,7 +12,7 @@ let g:ale_warn_about_trailing_whitespace = 0
 " TODO: Consider removing this once https://github.com/htacg/tidy-html5/issues/119 is closed
 " TODO: Add back python support once configured properly to not be so
 " distracting
-let g:ale_linters = {'html': [], 'python': []}
+let g:ale_linters = {'html': [], 'python': ['black']}
 
 let g:ale_fixers = { 'html': ['prettier'], 'javascript': ['eslint', 'prettier'], 'json': ['prettier'], 'css': ['prettier'], 'python': ['black'], 'yaml': ['prettier']}
 

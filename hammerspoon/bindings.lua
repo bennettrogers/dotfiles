@@ -8,36 +8,6 @@ require "grid"
 bind = hs.hotkey.bind
 
 --
--- Window management
---
-
--- grid push
-bind(hyper, 'h', gridset(goLeft))
-bind(hyper, 'j', gridset(goDown))
-bind(hyper, 'l', gridset(goRight))
-bind(hyper, 'k', gridset(goUp))
-bind(hyper, 'y', gridset(goTopLeft))
-bind(hyper, 'u', gridset(goTopRight))
-bind(hyper, 'b', gridset(goBottomLeft))
-bind(hyper, 'n', gridset(goBottomRight))
-
--- grid move
-bind(hyper, 'left', grid.pushWindowLeft)
-bind(hyper, 'down', grid.pushWindowDown)
-bind(hyper, 'right', grid.pushWindowRight)
-bind(hyper, 'up', grid.pushWindowUp)
-
--- grid resize
-bind(hyper, '=', grid.resizeWindowTaller)
-bind(hyper, '-', grid.resizeWindowShorter)
-bind(hyper, '[', grid.resizeWindowThinner)
-bind(hyper, ']', grid.resizeWindowWider)
-
--- grid maximize
-bind(hyper, 'm', grid.maximizeWindow)
-
-
---
 -- Music management
 --
 

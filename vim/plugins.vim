@@ -58,7 +58,6 @@ if g:terminal_env
     " Commenting out styled-components plugin since it breaks javascript.jsx indentation
     Plug 'styled-components/vim-styled-components'                      " Support for emotion.sh (and other styled-components type libs)
     " Plug 'python-mode/python-mode'
-    Plug 'maksimr/vim-jsbeautify'
 endif
 
 " External command helpers

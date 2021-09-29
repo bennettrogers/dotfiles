@@ -1,8 +1,5 @@
 local alert = require "hs.alert"
-local grid = require "hs.grid"
 local eventtap = require "hs.eventtap"
-
-require "grid"
 
 -- Define hotkeys
 bind = hs.hotkey.bind
@@ -15,14 +12,22 @@ bind = hs.hotkey.bind
 bind(hyper, 'p', hs.spotify.playpause)
 bind(hyper, 't', hs.spotify.displayCurrentTrack)
 
-
 --
 -- Application management
 --
 
 -- Launch or focus various apps
-bind(ctrl, '2', function() hs.application.launchOrFocus('iTerm') end)
-bind(ctrl, '3', function() hs.application.launchOrFocus('Google Chrome') end)
+bind(ctrl, '2', function()
+    hs.application.launchOrFocus('iTerm')
+end)
+bind(ctrl, '3', function()
+    hs.application.launchOrFocus('Google Chrome')
+end)
+
+-- Layout applications
+bind(hypershift, 'l', function()
+    hs.layout.apply(devLayout)
+end)
 
 -- focus last iterm window
 -- TODO: Make this work once app watchers are sorted out

@@ -62,6 +62,8 @@ endif
 
 " External command helpers
 Plug 'tpope/vim-eunuch'                                             " syntactic sugar for some unix commands (e.g. sudo write)
+Plug 'ZSaberLv0/ZFVimDirDiff'
+Plug 'ZSaberLv0/ZFVimIgnore'
 
 " Fun bits
 Plug 'ap/vim-css-color'                                             " Color previewer

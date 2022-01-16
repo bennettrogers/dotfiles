@@ -193,7 +193,13 @@ nmap <leader>q :q<CR>
 inoremap <C-c> <nop>
 
 " yank to the system clipboard
-set clipboard+=unnamedplus
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 " TODO: create a 'navigation' module
 " jump to the next error

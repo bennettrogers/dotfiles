@@ -27,6 +27,7 @@ end)
 -- Layout applications
 bind(hypershift, 'l', function()
     hs.layout.apply(devLayout)
+    print("Performing dev layout")
 end)
 
 -- focus last iterm window

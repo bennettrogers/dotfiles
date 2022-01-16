@@ -102,8 +102,5 @@
 [merge]
     conflictstyle = diff3
 [delta]
-    plus-color = "#012800"
-    minus-color = "#340001"
-    syntax-theme = Monokai Extended
     line-numbers = true
-    # side-by-side = true
+    side-by-side = true

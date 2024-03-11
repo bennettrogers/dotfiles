@@ -2,7 +2,8 @@ if g:terminal_env
     " Set up colors once colorscheme plugin has loaded
     syntax enable
     set background=dark
-    colorscheme OceanicNext
+    " colorscheme OceanicNext
+    colorscheme night-owl
 
     " Specify which terms to italicize
     highlight htmlArg gui=italic
@@ -13,7 +14,10 @@ if g:terminal_env
     highlight Todo    cterm=italic
 
     " Set Airline theme
-    let g:airline_theme='oceanicnext'
+    let g:airline_theme='night_owl'
+
+    " Set lightline theme
+    let g:lightline = { 'colorscheme': 'nightowl' }
 endif
 
 "-----------------------------------------------------------------------------

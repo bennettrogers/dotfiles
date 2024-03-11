@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-# For OS X, install XCode and command line tools first.
+# For OS X, install XCode, command line tools, and homebrew first.
 
 # Start working in the home directory
 pushd $HOME
@@ -10,6 +10,7 @@ dotfiles_owner='bennettrogers'
 joint_packages='git git-delta vim'
 osx_packages=''
 linux_packages=''
+pip_packages=''
 
 
 # get args
@@ -56,7 +57,7 @@ if [[ ${INSTALL} == 'YES' ]]; then
         fi
         installtoolflags='-y'
     elif [[ $platform == 'osx' ]]; then
-        installtool='port'
+        installtool='brew'
     fi
 
     # Install packages with installtool

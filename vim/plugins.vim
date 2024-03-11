@@ -29,7 +29,9 @@ endif
 
 " Styling
 if g:terminal_env
-    Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+    " Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
+    Plug 'haishanh/night-owl.vim'
+    Plug 'vim-airline/vim-airline-themes'
 endif
 
 " Language and syntax support

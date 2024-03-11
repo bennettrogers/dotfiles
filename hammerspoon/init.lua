@@ -18,12 +18,16 @@ require "ssid"
 hs.loadSpoon("MiroWindowsManager")
 
 -- hs.window.animationDuration = 0.05
+spoon.MiroWindowsManager.middleScreenSizes = {3, 2, 3/2, 1}
 spoon.MiroWindowsManager:bindHotkeys({
     up = {hyper, "k"},
     right = {hyper, "l"},
     down = {hyper, "j"},
     left = {hyper, "h"},
-    fullscreen = {hyper, "m"}
+    fullscreen = {hyper, "f"},
+    center = {hyper, "c"},
+    move = {hyper, "v"},
+    middle = {hyper, "m"}
 })
 
 alert.show("Config loaded", 1)

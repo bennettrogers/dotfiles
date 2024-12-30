@@ -18,7 +18,7 @@ require "ssid"
 hs.loadSpoon("MiroWindowsManager")
 
 -- hs.window.animationDuration = 0.05
-spoon.MiroWindowsManager.middleScreenSizes = {3, 2, 3/2, 1}
+spoon.MiroWindowsManager.middleScreenSizes = {1, 3, 2, 3/2}
 spoon.MiroWindowsManager:bindHotkeys({
     up = {hyper, "k"},
     right = {hyper, "l"},

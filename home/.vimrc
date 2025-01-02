@@ -8,17 +8,9 @@ function! Dot(path)
 endfunction
 
 " Set global variables specifying which environment we're running in
-let g:oni_env = exists("g:gui_oni")
-let g:terminal_env = !g:oni_env
+let g:terminal_env = has('gui_running') ? 0 : 1
 
 " Load default configuration modules
 for file in glob(Dot('modules/default/*.vim'), 0, 1)
   execute 'source' file
 endfor
-
-" Load Oni configuration modules
-if g:oni_env
-  for file in glob(Dot('modules/oni/*.vim'), 0, 1)
-    execute 'source' file
-  endfor
-endif

@@ -24,19 +24,20 @@ if g:terminal_env
     Plug 'terryma/vim-multiple-cursors'                                 " sublime-style multiple cursors
     Plug 'Lokaltog/vim-easymotion'                                      " easy moving within a file
     Plug 'vim-airline/vim-airline'                                      " statusline customization utility
+    " Plug 'itchyny/lightline.vim'                                      " statusline customization utility
     Plug 'edkolev/tmuxline.vim'                                         " tmux statusline generator with support for patched fonts
 endif
 
 " Styling
 if g:terminal_env
-    " Plug 'bennettrogers/oceanic-next', { 'branch': 'sublime' }          " oceanicnext colorscheme (currently only used for its airline theme)
-    Plug 'haishanh/night-owl.vim'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'joshdick/onedark.vim'
 endif
 
 " Language and syntax support
 Plug 'Raimondi/delimitMate'                                         " smart handling of e.g. surrounding parens
 if g:terminal_env
+    Plug 'sheerun/vim-polyglot'                                         " language packs
     Plug 'dense-analysis/ale'
     " Plug 'ludovicchabant/vim-gutentags'
     Plug 'mattn/emmet-vim'                                              " web development multitool

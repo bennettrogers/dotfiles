@@ -1,9 +1,8 @@
 if g:terminal_env
     " Set up colors once colorscheme plugin has loaded
     syntax enable
-    set background=dark
-    " colorscheme OceanicNext
-    colorscheme night-owl
+    let g:onedark_terminal_italics = 1
+    colorscheme onedark
 
     " Specify which terms to italicize
     highlight htmlArg gui=italic
@@ -14,18 +13,14 @@ if g:terminal_env
     highlight Todo    cterm=italic
 
     " Set Airline theme
-    let g:airline_theme='night_owl'
+    let g:airline_theme='zenburn'
 
-    " Set lightline theme
-    let g:lightline = { 'colorscheme': 'nightowl' }
 endif
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
 if has("gui_running")
-    set guifont=Monaco:h12
-    colorscheme base16-oceanicnext
     if !exists("g:vimrcloaded")
         winpos 0 0
         if ! &diff

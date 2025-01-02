@@ -50,6 +50,11 @@ fi
 export LANG=$loc
 export LC_ALL=$loc
 
+# Ghostty shell integration for Bash. This should be at the top of your bashrc!
+if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
+    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/bash/ghostty.bash"
+fi
+
 # Set Bash to vi mode
 set -o vi
 

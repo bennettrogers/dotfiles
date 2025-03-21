@@ -133,6 +133,10 @@ if $INTERACTIVE_SESSION; then
     tic ~/.homesick/repos/dotfiles/terminal/xterm-256color.terminfo
     tic ~/.homesick/repos/dotfiles/terminal/tmux-256color.terminfo
 
+    if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+        export TERM=xterm-256color
+    fi
+
     # # autostart tmux
     # if [ "$PS1" != "" -a "${TMUX}" == "" -a "${SSH_TTY:-x}" != x ]; then
     #     # attempt to discover a detached session and attach it,
@@ -155,18 +159,7 @@ if $INTERACTIVE_SESSION; then
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-    # initialize pyenv
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
-    if command -v pyenv 1>/dev/null 2>&1; then
-      eval "$(pyenv init -)"
-    fi
-
-    # initialize pyenv-virtualenv
-    eval "$(pyenv virtualenv-init -)";
-
-    # initizlize serverless
+    # TODO: Install and initialize uv
 
     # tabtab source for serverless package
     # uninstall by removing these lines or running `tabtab uninstall serverless`
